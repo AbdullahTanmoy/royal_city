@@ -62,11 +62,25 @@ document.addEventListener('keydown', (e) => {
 
 // ===== NAVBAR ACTIVE LINK =====
 const navLinks = document.querySelectorAll('.nav-link');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+function setActiveNav(activeLink) {
+    navLinks.forEach(l => l.classList.remove('active'));
+    mobileNavLinks.forEach(l => l.classList.remove('active'));
+    activeLink.classList.add('active');
+
+    const href = activeLink.getAttribute('href');
+    const matchingDesktop = document.querySelector(`.nav-link[href="${href}"]`);
+    const matchingMobile = document.querySelector(`.mobile-nav-link[href="${href}"]`);
+    if (matchingDesktop) matchingDesktop.classList.add('active');
+    if (matchingMobile) matchingMobile.classList.add('active');
+}
+
 navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-    });
+    link.addEventListener('click', () => setActiveNav(link));
+});
+mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => setActiveNav(link));
 });
 
 // ===== WHATSAPP TOOLTIP =====

@@ -467,7 +467,9 @@ body {
 /* ===== SOCIAL LINKS ===== */
 .social-link {
     transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 .social-link:hover {
     color: #FFC20E;

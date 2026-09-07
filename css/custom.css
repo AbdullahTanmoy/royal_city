@@ -161,14 +161,20 @@ body {
 }
 
 .hero-dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 9999px;
+    background: #8D8D8D;
     border: none;
     cursor: pointer;
     padding: 0;
+    transition: width 0.3s ease, height 0.3s ease, background 0.3s ease;
 }
 
 .hero-dot-active {
-    background: #FFC20E;
     width: 1.5rem;
+    height: 1.25rem;
+    background: #FFC20E;
 }
 
 /* ===== BUTTONS - Professional hover effects ===== */
@@ -485,9 +491,9 @@ body.menu-open #navbar {
         font-size: 2.5rem !important;
         line-height: 1.2 !important;
     }
-    .hero-subtitle {
+    /* .hero-subtitle {
         font-size: 1rem !important;
-    }
+    } */
     .stats-grid {
         flex-wrap: wrap;
         gap: 1.5rem !important;

@@ -15,15 +15,11 @@
 
         slides[current].classList.remove('hero-slide-active');
         dots[current].classList.remove('hero-dot-active');
-        dots[current].style.width = '';
-        dots[current].style.height = '';
 
         current = index;
 
         slides[current].classList.add('hero-slide-active');
         dots[current].classList.add('hero-dot-active');
-        dots[current].style.width = '1.5rem';
-        dots[current].style.height = '1.25rem';
     }
 
     function next() {

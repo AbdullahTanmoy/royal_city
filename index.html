@@ -429,10 +429,10 @@
     </div>
 </section>
 
-<!-- ===== ABOUT US ===== -->
-<section class="py-16 px-6 md:px-16 lg:px-32 bg-white">
+<!-- ===== ABOUT US (Visible) ===== -->
+<section class="about-visible py-16 px-6 md:px-16 lg:px-32 bg-white hidden">
     <div class="container mx-auto">
-        <div class="flex flex-col lg:flex-row gap-12 items-start">
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
             <!-- Left - Image Grid -->
             <div class="lg:w-1/2 w-full">
                 <div class="grid grid-cols-2 gap-3 sm:gap-4">
@@ -451,17 +451,17 @@
             </div>
 
             <!-- Right - Content -->
-            <div class="lg:w-1/2">
+            <div class="lg:w-1/2 about-content">
                 <span class="inline-block bg-[#FFF8E0] text-gold text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg mb-4">
                     About Us
                 </span>
-                <h2 class="font-space font-bold text-3xl md:text-4xl text-navy leading-tight mb-4">
+                <h2 class="font-space font-bold text-3xl md:text-4xl text-navy leading-tight mb-4 about-heading">
                     Building planned communities <br class="hidden sm:block" />since day one
                 </h2>
-                <p class="text-[#777777] text-base leading-relaxed mb-6">
+                <p class="text-[#777777] text-base leading-relaxed mb-6 about-paragraph">
                     Purbachal Royal City is a fully planned township focused on transparent processes, verified titles, and modern infrastructure — designed to be a sound long-term investment and a genuinely livable community.
                 </p>
-                <div class="flex flex-wrap gap-2 mb-6">
+                <div class="flex flex-wrap gap-2 mb-6 about-badges">
                     <span class="bg-[#F7F7F5] border border-[#E5E5E5] text-navy px-4 py-1.5 rounded-full text-sm font-semibold">Vision-driven</span>
                     <span class="bg-[#F7F7F5] border border-[#E5E5E5] text-navy px-4 py-1.5 rounded-full text-sm font-semibold">Customer-centric</span>
                     <span class="bg-[#F7F7F5] border border-[#E5E5E5] text-navy px-4 py-1.5 rounded-full text-sm font-semibold">Fully Documented</span>
@@ -474,6 +474,104 @@
         </div>
     </div>
 </section>
+
+<!-- about us -->
+<section class="about-visible py-16 px-6 md:px-16 lg:px-32 bg-white">
+    <div class="container mx-auto">
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+
+            <!-- Left - Image Grid -->
+            <div class="lg:w-1/2 w-full">
+
+                <!-- Mobile: single column | Desktop: 2 columns -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+
+                    <!-- Main Image -->
+                    <img
+                        src="assets/images/Architectural_visualization_of_day.jpeg"
+                        alt="Building"
+                        class="rounded-2xl w-full h-64 sm:h-72 md:h-full object-cover md:row-span-2"
+                    />
+
+                    <!-- Master Plan -->
+                    <img
+                        src="assets/images/Residential_development_master_plan.jpeg"
+                        alt="Master Plan"
+                        class="rounded-2xl w-full h-52 sm:h-56 md:h-48 object-cover"
+                    />
+
+                    <!-- Bottom Images -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-3 sm:gap-4">
+
+                        <img
+                            src="assets/images/Green_community_development_in.jpeg"
+                            alt="Green"
+                            class="rounded-2xl w-full h-48 sm:h-40 md:h-40 object-cover"
+                        />
+
+                        <img
+                            src="assets/images/Residential_boulevard.jpeg"
+                            alt="Boulevard"
+                            class="rounded-2xl w-full h-48 sm:h-40 md:h-40 object-cover"
+                        />
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Right - Content -->
+            <div class="lg:w-1/2 w-full about-content">
+
+                <span class="inline-block bg-[#FFF8E0] text-gold text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg mb-4">
+                    About Us
+                </span>
+
+                <h2 class="font-space font-bold text-3xl md:text-4xl text-navy leading-tight mb-4 about-heading">
+                    Building planned communities
+                    <br class="hidden sm:block" />
+                    since day one
+                </h2>
+
+                <p class="text-[#777777] text-base leading-relaxed mb-6 about-paragraph">
+                    Purbachal Royal City is a fully planned township focused on
+                    transparent processes, verified titles, and modern infrastructure —
+                    designed to be a sound long-term investment and a genuinely
+                    livable community.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-6 about-badges">
+
+                    <span class="bg-[#F7F7F5] border border-[#E5E5E5] text-navy px-4 py-1.5 rounded-full text-sm font-semibold">
+                        Vision-driven
+                    </span>
+
+                    <span class="bg-[#F7F7F5] border border-[#E5E5E5] text-navy px-4 py-1.5 rounded-full text-sm font-semibold">
+                        Customer-centric
+                    </span>
+
+                    <span class="bg-[#F7F7F5] border border-[#E5E5E5] text-navy px-4 py-1.5 rounded-full text-sm font-semibold">
+                        Fully Documented
+                    </span>
+
+                    <span class="bg-[#F7F7F5] border border-[#E5E5E5] text-navy px-4 py-1.5 rounded-full text-sm font-semibold">
+                        Scalable Development
+                    </span>
+
+                </div>
+
+                <a href="#" class="btn btn-primary px-8 py-3.5 text-sm">
+                    Discover Our Story
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 
 
     <!-- ===== BENEFITS / WHY INVEST ===== -->

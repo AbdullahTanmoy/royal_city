@@ -518,6 +518,40 @@ body.menu-open #navbar {
     transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
+/* ===== ABOUT (VISIBLE) RESPONSIVE ===== */
+/* Desktop (lg and up) stays as-is; these only refine mobile/tablet. */
+
+/* Below lg: stack content under images with breathing room */
+@media (max-width: 1023px) {
+    .about-visible .about-content {
+        width: 100%;
+    }
+    .about-visible .about-heading {
+        font-size: 1.875rem; /* 30px */
+    }
+    .about-visible .about-paragraph {
+        font-size: 0.95rem;
+    }
+    .about-visible .about-badges {
+        row-gap: 0.5rem;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 640px) {
+    .about-visible .about-content {
+        padding-top: 0.25rem;
+    }
+    .about-visible .about-heading {
+        font-size: 1.65rem; /* ~26px */
+        line-height: 1.3;
+    }
+    .about-visible .about-paragraph {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .hero-title {

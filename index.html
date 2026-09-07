@@ -101,8 +101,14 @@
 
     <!-- ===== HERO SECTION ===== -->
     <section class="relative w-full min-h-screen overflow-hidden">
-        <!-- Background Image with Gradient -->
-        <div class="absolute inset-0 hero-gradient bg-cover bg-center" style="background-image: url('assets/images/Architectural_visualization_of_day.jpeg');">
+        <!-- Background Image Slider -->
+        <div id="hero-slider" class="absolute inset-0">
+            <div class="hero-slide hero-slide-active" style="background-image: url('assets/images/Architectural_visualization_of_day.jpeg');"></div>
+            <div class="hero-slide" style="background-image: url('assets/images/Architectural_visualization_of_sunset.jpeg');"></div>
+            <div class="hero-slide" style="background-image: url('assets/images/Architectural_visualization_of_night.jpeg');"></div>
+            <div class="hero-slide" style="background-image: url('assets/images/Residential_development_master_plan.jpeg');"></div>
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 hero-gradient"></div>
         </div>
 
         <!-- Hero Content -->
@@ -158,10 +164,10 @@
 
         <!-- Carousel Dots -->
         <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3">
-            <span class="w-5 h-5 rounded-full bg-gold"></span>
-            <span class="w-4 h-4 rounded-full bg-[#8D8D8D]"></span>
-            <span class="w-4 h-4 rounded-full bg-[#8D8D8D]"></span>
-            <span class="w-4 h-4 rounded-full bg-[#8D8D8D]"></span>
+            <button class="hero-dot hero-dot-active w-5 h-5 rounded-full bg-gold transition-all duration-300" data-slide="0" aria-label="Slide 1"></button>
+            <button class="hero-dot w-4 h-4 rounded-full bg-[#8D8D8D] transition-all duration-300" data-slide="1" aria-label="Slide 2"></button>
+            <button class="hero-dot w-4 h-4 rounded-full bg-[#8D8D8D] transition-all duration-300" data-slide="2" aria-label="Slide 3"></button>
+            <button class="hero-dot w-4 h-4 rounded-full bg-[#8D8D8D] transition-all duration-300" data-slide="3" aria-label="Slide 4"></button>
         </div>
     </section>
 
@@ -870,6 +876,7 @@
         </span>
     </a>
     <!-- ===== SCRIPTS ===== -->
+    <script src="js/hero-slider.js"></script>
     <script src="js/main.js"></script>
     <script src="js/interactions.js"></script>
 </body>

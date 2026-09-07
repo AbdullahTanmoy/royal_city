@@ -140,7 +140,35 @@ body {
 
 /* ===== HERO ===== */
 .hero-gradient {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+/* ===== HERO SLIDER ===== */
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.08);
+    transition: opacity 1.5s ease, transform 6s ease;
+    will-change: opacity, transform;
+}
+
+.hero-slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hero-dot {
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hero-dot-active {
+    background: #FFC20E;
+    width: 1.5rem;
 }
 
 /* ===== BUTTONS - Professional hover effects ===== */

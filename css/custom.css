@@ -407,7 +407,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* ===== MOBILE MENU ===== */
+/* ===== MOBILE MENU (Full-Screen) ===== */
 #hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(4px, 4px);
 }
@@ -424,12 +424,31 @@ body {
     pointer-events: auto;
 }
 .mobile-menu.open .mobile-menu-panel {
-    transform: translateX(0);
+    transform: translateY(0);
+}
+
+.mobile-menu:not(.open) {
+    pointer-events: none;
+}
+.mobile-menu:not(.open) .mobile-menu-panel {
+    pointer-events: none;
 }
 
 .mobile-nav-link.active {
     background: #FFF8E0;
     color: #171818;
+}
+
+/* Hide navbar when mobile menu is open */
+body.menu-open #navbar {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#navbar {
+    transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 /* ===== RESPONSIVE ===== */

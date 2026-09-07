@@ -65,12 +65,14 @@ function openMobileMenu() {
     hamburger.classList.add('active');
     mobileMenu.classList.add('open');
     document.body.style.overflow = 'hidden';
+    document.body.classList.add('menu-open');
 }
 
 function closeMobileMenu() {
     hamburger.classList.remove('active');
     mobileMenu.classList.remove('open');
     document.body.style.overflow = '';
+    document.body.classList.remove('menu-open');
 }
 
 if (hamburger) {

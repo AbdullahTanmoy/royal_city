@@ -407,6 +407,31 @@ body {
     transform: translateY(-2px);
 }
 
+/* ===== MOBILE MENU ===== */
+#hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+}
+#hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+#hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+}
+
+.mobile-menu.open .mobile-menu-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+.mobile-menu.open .mobile-menu-panel {
+    transform: translateX(0);
+}
+
+.mobile-nav-link.active {
+    background: #FFF8E0;
+    color: #171818;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .hero-title {

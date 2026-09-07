@@ -58,21 +58,42 @@ if (navbar) {
 
 // ===== MOBILE MENU =====
 const hamburger = document.getElementById('hamburger');
-let menuOpen = false;
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileClose = document.getElementById('mobile-close');
+
+function openMobileMenu() {
+    hamburger.classList.add('active');
+    mobileMenu.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+}
 
 if (hamburger) {
     hamburger.addEventListener('click', () => {
-        menuOpen = !menuOpen;
-        const spans = hamburger.querySelectorAll('span');
-        spans.forEach((span, i) => {
-            if (menuOpen) {
-                span.style.transform = i === 1 ? 'scaleX(0)' : `rotate(${i === 0 ? '45deg' : '-45deg'}) translateY(${i === 0 ? '6px' : '-6px'})`;
-            } else {
-                span.style.transform = 'none';
-            }
-        });
+        if (mobileMenu.classList.contains('open')) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
     });
 }
+
+if (mobileClose) {
+    mobileClose.addEventListener('click', closeMobileMenu);
+}
+
+if (mobileMenu) {
+    mobileMenu.querySelector('.mobile-menu-overlay').addEventListener('click', closeMobileMenu);
+}
+
+document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+});
 
 // ===== BENEFIT CARDS HOVER =====
 document.querySelectorAll('.benefit-card').forEach(card => {

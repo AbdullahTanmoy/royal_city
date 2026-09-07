@@ -1,0 +1,842 @@
+﻿<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>পূবাচল রয়্যাল সিটি | Purbachal Royal City</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body>
+
+    <!-- ===== PRELOADER ===== -->
+    <div id="preloader" class="fixed inset-0 z-[99999] bg-navy flex flex-col items-center justify-center transition-opacity duration-800">
+        <div class="w-16 h-16 border-4 border-gold border-t-transparent rounded-full animate-spin"></div>
+        <p class="text-white/60 text-sm mt-4 font-bangla">লোড হচ্ছে...</p>
+    </div>
+    <!-- ===== CUSTOM CURSOR ===== -->
+    <div class="cursor-dot hidden lg:block"></div>
+    <div class="cursor-ring hidden lg:block"></div>
+    <!-- ===== NAVBAR ===== -->
+    <header id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-[1660px]">
+        <nav class="navbar-glass rounded-full px-6 md:px-14 py-3 md:py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <img src="assets/images/logo/R_City_logo.svg" alt="Purbachal Royal City Logo" class="h-10 md:h-11 w-auto transition-transform duration-300 group-hover:scale-105" />
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-1">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">Properties</a>
+                <a href="#" class="nav-link">Projects</a>
+                <a href="#" class="nav-link">Master Plan</a>
+                <a href="#" class="nav-link">Lifestyle</a>
+                <a href="#" class="nav-link">Offers</a>
+            </div>
+
+            <!-- Right Actions -->
+            <div class="flex items-center gap-3">
+                <div class="hidden md:flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-[#E5E5E5] transition cursor-pointer hover:border-[#FFC20E] hover:shadow-sm">
+                    <i class="fas fa-search text-[#A9A9A9] text-sm"></i>
+                    <span class="text-[#A9A9A9] text-sm">Search</span>
+                </div>
+                <a href="#" class="btn btn-primary px-5 py-2.5 text-sm">
+                    Browse Plots
+                </a>
+                <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 p-2 cursor-pointer">
+                    <span class="block w-6 h-0.5 bg-navy transition-all"></span>
+                    <span class="block w-6 h-0.5 bg-navy transition-all"></span>
+                    <span class="block w-6 h-0.5 bg-navy transition-all"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="relative w-full min-h-screen overflow-hidden">
+        <!-- Background Image with Gradient -->
+        <div class="absolute inset-0 hero-gradient bg-cover bg-center" style="background-image: url('assets/images/Architectural_visualization_of_day.jpeg');">
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 container mx-auto px-6 md:px-16 lg:px-32 pt-40 pb-20 min-h-screen flex flex-col justify-center">
+            <div class="max-w-4xl">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 bg-white rounded-full px-4 py-1.5 border border-[#E5E5E5] mb-6">
+                    <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                    <span class="text-[#444545] text-xs font-semibold tracking-wide">PURBACHAL ROYAL CITY</span>
+                </div>
+
+                <!-- Title -->
+                <h1 class="hero-title text-white font-space font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
+                    Find Your Place in a <br class="hidden sm:block" />
+                    Better-Planned Future
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="hero-subtitle text-white/80 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
+                    A data-driven view into every plot, project, and payment plan across Royal City — search, compare, and book in minutes.
+                </p>
+
+                <!-- Buttons -->
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="btn btn-primary px-8 py-3.5 text-base">
+                        Browse Plots
+                    </a>
+                    <a href="#" class="btn btn-outline px-8 py-3.5 text-base">
+                        <i class="fas fa-play text-sm"></i>
+                        Watch Overview
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="mt-16 md:mt-20 border border-[#FFD65E] rounded-lg p-6 md:p-8 flex flex-wrap items-center justify-around gap-4">
+                <div class="text-center">
+                    <div class="text-white font-space font-bold text-3xl md:text-4xl tracking-wider">1,240+</div>
+                    <div class="text-white font-bold text-sm md:text-base">Total Plots</div>
+                </div>
+                <div class="hidden md:block w-px h-12 bg-[#FFD65E]"></div>
+                <div class="text-center">
+                    <div class="text-white font-space font-bold text-3xl md:text-4xl tracking-wider">312</div>
+                    <div class="text-white font-bold text-sm md:text-base">Available Plots</div>
+                </div>
+                <div class="hidden md:block w-px h-12 bg-[#FFD65E]"></div>
+                <div class="text-center">
+                    <div class="text-white font-space font-bold text-3xl md:text-4xl tracking-wider">2,100+</div>
+                    <div class="text-white font-bold text-sm md:text-base">Happy Clients</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Dots -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3">
+            <span class="w-5 h-5 rounded-full bg-gold"></span>
+            <span class="w-4 h-4 rounded-full bg-[#8D8D8D]"></span>
+            <span class="w-4 h-4 rounded-full bg-[#8D8D8D]"></span>
+            <span class="w-4 h-4 rounded-full bg-[#8D8D8D]"></span>
+        </div>
+    </section>
+
+    <!-- ===== QUICK LINKS / SERVICES ===== -->
+    <section class="py-16 px-6 md:px-16 lg:px-32 bg-white">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                <!-- Card 1 -->
+                <div class="card-hover bg-white rounded-2xl border border-[#E5E5E5] p-6 text-center">
+                    <div class="w-12 h-12 bg-[#F7F7F5] rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <span class="text-2xl text-navy">▦</span>
+                    </div>
+                    <div class="text-xs text-[#777777] font-jetbrains font-medium mb-1">01</div>
+                    <h3 class="font-space font-bold text-navy text-sm mb-1">Explore Plots</h3>
+                    <p class="text-[#777777] text-xs">Browse all available and featured plots.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-hover bg-white rounded-2xl border border-[#E5E5E5] p-6 text-center">
+                    <div class="w-12 h-12 bg-[#F7F7F5] rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <span class="text-2xl text-navy">◈</span>
+                    </div>
+                    <div class="text-xs text-[#777777] font-jetbrains font-medium mb-1">02</div>
+                    <h3 class="font-space font-bold text-navy text-sm mb-1">Master Plan</h3>
+                    <p class="text-[#777777] text-xs">View the complete township layout.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-hover bg-white rounded-2xl border border-[#E5E5E5] p-6 text-center">
+                    <div class="w-12 h-12 bg-[#F7F7F5] rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <span class="text-2xl text-navy">%</span>
+                    </div>
+                    <div class="text-xs text-[#777777] font-jetbrains font-medium mb-1">03</div>
+                    <h3 class="font-space font-bold text-navy text-sm mb-1">Current Offers</h3>
+                    <p class="text-[#777777] text-xs">Active discounts and payment plans.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card-hover bg-white rounded-2xl border border-[#E5E5E5] p-6 text-center">
+                    <div class="w-12 h-12 bg-[#F7F7F5] rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <span class="text-2xl text-navy">⌂</span>
+                    </div>
+                    <div class="text-xs text-[#777777] font-jetbrains font-medium mb-1">04</div>
+                    <h3 class="font-space font-bold text-navy text-sm mb-1">Project Facilities</h3>
+                    <p class="text-[#777777] text-xs">Roads, security, utilities, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PLOTS SECTION ===== -->
+    <section class="py-16 px-6 md:px-16 lg:px-32 bg-[#F7F7F5]">
+        <div class="container mx-auto">
+            <!-- Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+                <div>
+                    <span class="inline-block bg-[#FFF8E0] text-gold text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg mb-3">
+                        Property Discovery
+                    </span>
+                    <h2 class="font-space font-bold text-3xl md:text-4xl text-navy">Find Your Ideal Plot</h2>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button class="filter-btn bg-navy text-white px-5 py-2 rounded-full text-xs font-semibold">All</button>
+                    <button class="filter-btn bg-white border border-[#E5E5E5] text-navy px-5 py-2 rounded-full text-xs font-semibold hover:border-navy">Featured</button>
+                    <button class="filter-btn bg-white border border-[#E5E5E5] text-navy px-5 py-2 rounded-full text-xs font-semibold hover:border-navy">Under 5 Katha</button>
+                    <button class="filter-btn bg-white border border-[#E5E5E5] text-navy px-5 py-2 rounded-full text-xs font-semibold hover:border-navy">Corner Plot</button>
+                    <button class="filter-btn bg-white border border-[#E5E5E5] text-navy px-5 py-2 rounded-full text-xs font-semibold hover:border-navy">Lakeview</button>
+                </div>
+            </div>
+
+            <!-- Plot Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Plot 1 -->
+                <div class="plot-card bg-white rounded-2xl border border-[#E5E5E5] overflow-hidden">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="assets/images/Residential_plot_development.jpeg" alt="Plot" class="plot-image w-full h-full object-cover" />
+                        <span class="absolute top-3 left-3 bg-gold text-navy text-[10px] font-extrabold uppercase px-3 py-1 rounded-lg">Featured</span>
+                        <span class="absolute top-3 right-3 bg-white/92 text-[#1A7A3E] text-[10px] font-bold px-3 py-1 rounded-lg flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#1A7A3E]"></span>
+                            Available
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-space font-bold text-navy text-base">Sector 4, Plot 118</h3>
+                        <p class="text-[#777777] text-sm">Block C · Purbachal Royal City</p>
+                        <div class="grid grid-cols-3 gap-2 mt-4">
+                            <div class="bg-[#F7F7F5] rounded-lg p-2 text-center">
+                                <span class="font-jetbrains font-bold text-navy text-sm block">5 Katha</span>
+                                <span class="text-[#777777] text-[10px] uppercase">Size</span>
+                            </div>
+                            <div class="bg-[#F7F7F5] rounded-lg p-2 text-center">
+                                <span class="font-jetbrains font-bold text-navy text-sm block">3,600</span>
+                                <span class="text-[#777777] text-[10px] uppercase">Sqft</span>
+                            </div>
+                            <div class="bg-[#F7F7F5] rounded-lg p-2 text-center">
+                                <span class="font-jetbrains font-bold text-navy text-sm block">60 ft</span>
+                                <span class="text-[#777777] text-[10px] uppercase">Road</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-4 pt-4 border-t border-[#E5E5E5]">
+                            <span class="font-space font-bold text-navy text-lg">৳85,00,000</span>
+                            <a href="#" class="btn btn-plot px-5 py-2.5 text-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plot 2 -->
+                <div class="plot-card bg-white rounded-2xl border border-[#E5E5E5] overflow-hidden">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="assets/images/Open_land_development_in_Purbachal.jpeg" alt="Plot" class="plot-image w-full h-full object-cover" />
+                        <span class="absolute top-3 right-3 bg-white/92 text-[#1A7A3E] text-[10px] font-bold px-3 py-1 rounded-lg flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#1A7A3E]"></span>
+                            Available
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-space font-bold text-navy text-base">Sector 2, Plot 076</h3>
+                        <p class="text-[#777777] text-sm">Block A · Purbachal Royal City</p>
+                        <div class="grid grid-cols-3 gap-2 mt-4">
+                            <div class="bg-[#F7F7F5] rounded-lg p-2 text-center">
+                                <span class="font-jetbrains font-bold text-navy text-sm block">3 Katha</span>
+                                <span class="text-[#777777] text-[10px] uppercase">Size</span>
+                            </div>
+                            <div class="bg-[#F7F7F5] rounded-lg p-2 text-center">
+                                <span class="font-jetbrains font-bold text-navy text-sm block">2,160</span>
+                                <span class="text-[#777777] text-[10px] uppercase">Sqft</span>
+                            </div>
+                            <div class="bg-[#F7F7F5] rounded-lg p-2 text-center">
+                                <span class="font-jetbrains font-bold text-navy text-sm block">40 ft</span>
+                                <span class="text-[#777777] text-[10px] uppercase">Road</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-4 pt-4 border-t border-[#E5E5E5]">
+                            <span class="font-space font-bold text-navy text-lg">৳52,00,000</span>
+                            <a href="#" class="btn btn-plot px-5 py-2.5 text-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plot 3 -->
+                <div class="plot-card bg-white rounded-2xl border border-[#E5E5E5] overflow-hidden">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="assets/images/Residential_community_development.jpeg" alt="Plot" class="plot-image w-full h-full object-cover" />
+                        <span class="absolute top-3 left-3 bg-gold text-navy text-[10px] font-extrabold uppercase px-3 py-1 rounded-lg">New</span>
+                        <span class="absolute top-3 right-3 bg-white/92 text-[#1A7A3E] text-[10px] font-bold px-3 py-1 rounded-lg flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#1A7A3E]"></span>
+                            Available
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-space font-bold text-navy text-base">Sector 6, Plot 204</h3>
+                        <p class="text-[#777777] text-sm">Block E · Purbachal Royal City</p>
+                        <div class="grid grid-cols-3 gap-2 mt-4">
+                            <div class="bg-[#F7F7F5] rounded-lg p-2 text-center">
+                                <span class="font-jetbrains font-bold text-navy text-sm block">7 Katha</span>
+                                <span class="text-[#777777] text-[10px] uppercase">Size</span>
+                            </div>
+                            <div class="bg-[#F7F7F5] rounded-lg p-2 text-center">
+                                <span class="font-jetbrains font-bold text-navy text-sm block">5,040</span>
+                                <span class="text-[#777777] text-[10px] uppercase">Sqft</span>
+                            </div>
+                            <div class="bg-[#F7F7F5] rounded-lg p-2 text-center">
+                                <span class="font-jetbrains font-bold text-navy text-sm block">200 ft</span>
+                                <span class="text-[#777777] text-[10px] uppercase">Road</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-4 pt-4 border-t border-[#E5E5E5]">
+                            <span class="font-space font-bold text-navy text-lg">৳1,20,00,000</span>
+                            <a href="#" class="btn btn-plot px-5 py-2.5 text-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plot 4 -->
+                <div class="plot-card bg-white rounded-2xl border border-[#E5E5E5] overflow-hidden">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="assets/images/Residential_development_entrance.jpeg" alt="Plot" class="plot-image w-full h-full object-cover" />
+                        <span class="absolute top-3 left-3 bg-gold text-navy text-[10px] font-extrabold uppercase px-3 py-1 rounded-lg">New</span>
+                        <span class="absolute top-3 right-3 bg-white/92 text-[#1A7A3E] text-[10px] font-bold px-3 py-1 rounded-lg flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#1A7A3E]"></span>
+                            Available
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-space font-bold text-navy text-base">Sector 6, Plot 204</h3>
+                        <p class="text-[#777777] text-sm">Block E · Purbachal Royal City</p>
+                        <div class="grid grid-cols-3 gap-2 mt-4">
+                            <div class="bg-[#F7F7F5] rounded-lg p-2 text-center">
+                                <span class="font-jetbrains font-bold text-navy text-sm block">7 Katha</span>
+                                <span class="text-[#777777] text-[10px] uppercase">Size</span>
+                            </div>
+                            <div class="bg-[#F7F7F5] rounded-lg p-2 text-center">
+                                <span class="font-jetbrains font-bold text-navy text-sm block">5,040</span>
+                                <span class="text-[#777777] text-[10px] uppercase">Sqft</span>
+                            </div>
+                            <div class="bg-[#F7F7F5] rounded-lg p-2 text-center">
+                                <span class="font-jetbrains font-bold text-navy text-sm block">200 ft</span>
+                                <span class="text-[#777777] text-[10px] uppercase">Road</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-4 pt-4 border-t border-[#E5E5E5]">
+                            <span class="font-space font-bold text-navy text-lg">৳1,20,00,000</span>
+                            <a href="#" class="btn btn-plot px-5 py-2.5 text-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT US ===== -->
+<section class="py-16 px-6 md:px-16 lg:px-32 bg-white">
+    <div class="container mx-auto">
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+            <!-- Left - Image Grid -->
+            <div class="lg:w-1/2">
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- বড় ইমেজ (সবচেয়ে উপরের) -->
+                    <img src="assets/images/Architectural_visualization_of_day.jpeg" alt="Building" class="rounded-2xl h-64 w-full object-cover col-span-2" />
+                    
+                    <!-- নিচের বামের ইমেজ -->
+                    <img src="assets/images/Residential_development_master_plan.jpeg" alt="Master Plan" class="rounded-2xl h-48 w-full object-cover" />
+                    
+                    <!-- নিচের ডান পাশের দুইটি ছোট ইমেজ (ভার্টিক্যালি স্ট্যাকড) -->
+                    <div class="grid grid-rows-2 gap-4">
+                        <img src="assets/images/Green_community_development_in.jpeg" alt="Green" class="rounded-2xl h-22 w-full object-cover" />
+                        <img src="assets/images/Residential_boulevard.jpeg" alt="Boulevard" class="rounded-2xl h-22 w-full object-cover" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right - Content -->
+            <div class="lg:w-1/2">
+                <span class="inline-block bg-[#FFF8E0] text-gold text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg mb-4">
+                    About Us
+                </span>
+                <h2 class="font-space font-bold text-3xl md:text-4xl text-navy leading-tight mb-4">
+                    Building planned communities <br class="hidden sm:block" />since day one
+                </h2>
+                <p class="text-[#777777] text-base leading-relaxed mb-6">
+                    Purbachal Royal City is a fully planned township focused on transparent processes, verified titles, and modern infrastructure — designed to be a sound long-term investment and a genuinely livable community.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="bg-[#F7F7F5] border border-[#E5E5E5] text-navy px-4 py-1.5 rounded-full text-sm font-semibold">Vision-driven</span>
+                    <span class="bg-[#F7F7F5] border border-[#E5E5E5] text-navy px-4 py-1.5 rounded-full text-sm font-semibold">Customer-centric</span>
+                    <span class="bg-[#F7F7F5] border border-[#E5E5E5] text-navy px-4 py-1.5 rounded-full text-sm font-semibold">Fully Documented</span>
+                    <span class="bg-[#F7F7F5] border border-[#E5E5E5] text-navy px-4 py-1.5 rounded-full text-sm font-semibold">Scalable Development</span>
+                </div>
+                <a href="#" class="btn btn-primary px-8 py-3.5 text-sm">
+                    Discover Our Story
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ===== BENEFITS / WHY INVEST ===== -->
+    <section class="py-16 px-6 md:px-16 lg:px-32 bg-[#F7F7F5]">
+        <div class="container mx-auto">
+            <div class="mb-12">
+                <span class="inline-block bg-[#FFF8E0] text-gold text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg mb-3">
+                    Project Benefits
+                </span>
+                <h2 class="font-space font-bold text-3xl md:text-4xl text-navy">Why investors choose Royal City</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+                <div class="benefit-card bg-navy text-white rounded-2xl p-5 border border-navy">
+                    <span class="font-jetbrains text-gold text-sm block mb-3">01</span>
+                    <h4 class="benefit-text font-space font-bold text-sm">Prime Location</h4>
+                </div>
+                <div class="benefit-card bg-white rounded-2xl p-5 border border-[#E5E5E5]">
+                    <span class="font-jetbrains text-gold text-sm block mb-3">02</span>
+                    <h4 class="benefit-text font-space font-bold text-sm">Transparency</h4>
+                </div>
+                <div class="benefit-card bg-white rounded-2xl p-5 border border-[#E5E5E5]">
+                    <span class="font-jetbrains text-gold text-sm block mb-3">03</span>
+                    <h4 class="benefit-text font-space font-bold text-sm">Legal Assurance</h4>
+                </div>
+                <div class="benefit-card bg-white rounded-2xl p-5 border border-[#E5E5E5]">
+                    <span class="font-jetbrains text-gold text-sm block mb-3">04</span>
+                    <h4 class="benefit-text font-space font-bold text-sm">Expertise</h4>
+                </div>
+                <div class="benefit-card bg-white rounded-2xl p-5 border border-[#E5E5E5]">
+                    <span class="font-jetbrains text-gold text-sm block mb-3">05</span>
+                    <h4 class="benefit-text font-space font-bold text-sm">Innovative Technology</h4>
+                </div>
+                <div class="benefit-card bg-white rounded-2xl p-5 border border-[#E5E5E5]">
+                    <span class="font-jetbrains text-gold text-sm block mb-3">06</span>
+                    <h4 class="benefit-text font-space font-bold text-sm">Customer Support</h4>
+                </div>
+                <div class="benefit-card bg-white rounded-2xl p-5 border border-[#E5E5E5]">
+                    <span class="font-jetbrains text-gold text-sm block mb-3">07</span>
+                    <h4 class="benefit-text font-space font-bold text-sm">Connectivity</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MASTER PLAN ===== -->
+    <section class="py-16 px-6 md:px-16 lg:px-32 bg-white">
+        <div class="container mx-auto">
+            <div class="mb-10">
+                <span class="inline-block bg-[#FFF8E0] text-gold text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg mb-3">
+                    Interactive View
+                </span>
+                <h2 class="font-space font-bold text-3xl md:text-4xl text-navy">Master Plan Explorer</h2>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Left - Stats Card -->
+                <div class="lg:w-2/5 bg-navy rounded-2xl p-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-white font-space font-bold text-xl mb-4">Township Overview</h3>
+                        <p class="text-[#B8B8B6] text-sm leading-relaxed mb-6">
+                            Explore roads, plots, green zones and community facilities across the full development.
+                        </p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between py-3 border-b border-[#3A3A3A]">
+                            <span class="text-white text-sm">Total Area</span>
+                            <span class="text-gold font-jetbrains font-bold text-sm">412 Acres</span>
+                        </div>
+                        <div class="flex justify-between py-3 border-b border-[#3A3A3A]">
+                            <span class="text-white text-sm">Total Sectors</span>
+                            <span class="text-gold font-jetbrains font-bold text-sm">8</span>
+                        </div>
+                        <div class="flex justify-between py-3 border-b border-[#3A3A3A]">
+                            <span class="text-white text-sm">Road Network</span>
+                            <span class="text-gold font-jetbrains font-bold text-sm">60–200 ft</span>
+                        </div>
+                        <div class="flex justify-between py-3 border-b border-[#3A3A3A]">
+                            <span class="text-white text-sm">Green Coverage</span>
+                            <span class="text-gold font-jetbrains font-bold text-sm">18%</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary w-full py-3 text-sm mt-6">
+                        Search Plot on Map
+                    </a>
+                </div>
+
+                <!-- Right - Map Image -->
+                <div class="lg:w-3/5">
+                    <img src="assets/images/Residential_development_master_plan.jpeg" alt="Master Plan" class="rounded-2xl w-full h-auto object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LIFESTYLE ===== -->
+    <section class="py-16 px-6 md:px-16 lg:px-32 bg-[#F7F7F5]">
+        <div class="container mx-auto">
+            <div class="mb-10">
+                <span class="inline-block bg-[#FFF8E0] text-gold text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg mb-3">
+                    Lifestyle
+                </span>
+                <h2 class="font-space font-bold text-3xl md:text-4xl text-navy">Everything your community needs</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Item 1 -->
+                <div class="lifestyle-item rounded-2xl overflow-hidden h-56 relative group">
+                    <img src="assets/images/Residential_boulevard.jpeg" alt="Roads" class="w-full h-full object-cover" />
+                    <div class="lifestyle-overlay"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 z-10">
+                        <h4 class="text-white font-space font-bold text-base">Roads & Connectivity</h4>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="lifestyle-item rounded-2xl overflow-hidden h-56 relative group">
+                    <img src="assets/images/Green_community_development_in.jpeg" alt="Green" class="w-full h-full object-cover" />
+                    <div class="lifestyle-overlay"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 z-10">
+                        <h4 class="text-white font-space font-bold text-base">Green Spaces</h4>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="lifestyle-item rounded-2xl overflow-hidden h-56 relative group" style="background: linear-gradient(151deg, #C9A35F 0%, #5A6047 100%);">
+                    <img src="assets/images/Residential_development_entrance.jpeg" alt="Security" class="w-full h-full object-cover" />
+                    <div class="lifestyle-overlay"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 z-10">
+                        <h4 class="text-white font-space font-bold text-base">Security</h4>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="lifestyle-item rounded-2xl overflow-hidden h-56 relative group">
+                    <img src="assets/images/Designing_developing_residential.jpeg" alt="Utilities" class="w-full h-full object-cover" />
+                    <div class="lifestyle-overlay"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 z-10">
+                        <h4 class="text-white font-space font-bold text-base">Utilities</h4>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="lifestyle-item rounded-2xl overflow-hidden h-56 relative group" style="background: linear-gradient(151deg, #D4B877 0%, #8B7C4E 100%);">
+                    <img src="assets/images/Residential_community_development.jpeg" alt="Education" class="w-full h-full object-cover" />
+                    <div class="lifestyle-overlay"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 z-10">
+                        <h4 class="text-white font-space font-bold text-base">Education</h4>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="lifestyle-item rounded-2xl overflow-hidden h-56 relative group">
+                    <img src="assets/images/Open_land_development_visualization.jpeg" alt="Healthcare" class="w-full h-full object-cover" />
+                    <div class="lifestyle-overlay"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 z-10">
+                        <h4 class="text-white font-space font-bold text-base">Healthcare</h4>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="lifestyle-item rounded-2xl overflow-hidden h-56 relative group" style="background: linear-gradient(151deg, #C9A35F 0%, #5A6047 100%);">
+                    <img src="assets/images/Green_community_development_in.jpeg" alt="Green Spaces" class="w-full h-full object-cover" />
+                    <div class="lifestyle-overlay"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 z-10">
+                        <h4 class="text-white font-space font-bold text-base">Green Spaces</h4>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="lifestyle-item rounded-2xl overflow-hidden h-56 relative group">
+                    <img src="assets/images/Open_land_development_in_Purbachal.jpeg" alt="Utilities" class="w-full h-full object-cover" />
+                    <div class="lifestyle-overlay"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 z-10">
+                        <h4 class="text-white font-space font-bold text-base">Utilities</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== OFFERS ===== -->
+    <section class="py-16 px-6 md:px-16 lg:px-32 bg-white">
+        <div class="container mx-auto">
+            <div class="mb-10">
+                <span class="inline-block bg-[#FFF8E0] text-gold text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg mb-3">
+                    Offer Dashboard
+                </span>
+                <h2 class="font-space font-bold text-3xl md:text-4xl text-navy">Current offers & payment plans</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Offer 1 -->
+                <div class="offer-card bg-gold rounded-2xl p-7 border border-gold">
+                    <span class="bg-white text-navy text-[10px] font-bold uppercase px-3 py-1 rounded-lg inline-block mb-3">Active</span>
+                    <h4 class="font-space font-bold text-navy text-lg mb-2">Early Booking Discount</h4>
+                    <p class="text-[#444545] text-sm mb-3">Save on select plots when booked within Q3 2026.</p>
+                    <span class="font-jetbrains text-[#444545] text-sm">Valid until Sept 30, 2026</span>
+                </div>
+
+                <!-- Offer 2 -->
+                <div class="offer-card bg-white rounded-2xl p-7 border border-[#E5E5E5]">
+                    <span class="bg-white text-navy text-[10px] font-bold uppercase px-3 py-1 rounded-lg inline-block mb-3 border border-[#E5E5E5]">Active</span>
+                    <h4 class="font-space font-bold text-navy text-lg mb-2">12-Month Installment Plan</h4>
+                    <p class="text-[#444545] text-sm mb-3">Flexible monthly payment structure with no hidden fees.</p>
+                    <span class="font-jetbrains text-[#444545] text-sm">Ongoing</span>
+                </div>
+
+                <!-- Offer 3 -->
+                <div class="offer-card bg-white rounded-2xl p-7 border border-[#E5E5E5]">
+                    <span class="bg-white text-navy text-[10px] font-bold uppercase px-3 py-1 rounded-lg inline-block mb-3 border border-[#E5E5E5]">Active</span>
+                    <h4 class="font-space font-bold text-navy text-lg mb-2">12-Month Installment Plan</h4>
+                    <p class="text-[#444545] text-sm mb-3">Flexible monthly payment structure with no hidden fees.</p>
+                    <span class="font-jetbrains text-[#444545] text-sm">Ongoing</span>
+                </div>
+
+                <!-- Offer 4 -->
+                <div class="offer-card bg-white rounded-2xl p-7 border border-[#E5E5E5]">
+                    <span class="bg-white text-navy text-[10px] font-bold uppercase px-3 py-1 rounded-lg inline-block mb-3 border border-[#E5E5E5]">Download</span>
+                    <h4 class="font-space font-bold text-navy text-lg mb-2">Project Brochure</h4>
+                    <p class="text-[#444545] text-sm mb-3">Full details on pricing, layouts, and facilities.</p>
+                    <span class="font-jetbrains text-[#444545] text-sm">PDF · 4.2 MB</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="py-16 px-6 md:px-16 lg:px-32 bg-[#F7F7F5]">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+                <div>
+                    <span class="inline-block bg-[#FFF8E0] text-gold text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg mb-3">
+                        Gallery
+                    </span>
+                    <h2 class="font-space font-bold text-3xl md:text-4xl text-navy">Inside Royal City</h2>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button class="filter-btn bg-navy text-white px-5 py-2 rounded-full text-xs font-semibold">All</button>
+                    <button class="filter-btn bg-white border border-[#E5E5E5] text-navy px-5 py-2 rounded-full text-xs font-semibold hover:border-navy">Projects</button>
+                    <button class="filter-btn bg-white border border-[#E5E5E5] text-navy px-5 py-2 rounded-full text-xs font-semibold hover:border-navy">Lifestyle</button>
+                    <button class="filter-btn bg-white border border-[#E5E5E5] text-navy px-5 py-2 rounded-full text-xs font-semibold hover:border-navy">Construction</button>
+                    <button class="filter-btn bg-white border border-[#E5E5E5] text-navy px-5 py-2 rounded-full text-xs font-semibold hover:border-navy">Master Plan</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+                <img src="assets/images/Architectural_visualization_of_day.jpeg" alt="Gallery" class="gallery-img rounded-2xl h-64 object-cover" />
+                <img src="assets/images/Architectural_visualization_of_sunset.jpeg" alt="Gallery" class="gallery-img rounded-2xl h-64 object-cover" />
+                <img src="assets/images/Architectural_visualization_of_night.jpeg" alt="Gallery" class="gallery-img rounded-2xl h-64 object-cover" />
+                <img src="assets/images/Residential_development_master_plan.jpeg" alt="Gallery" class="gallery-img rounded-2xl h-64 object-cover" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="py-16 px-6 md:px-16 lg:px-32 bg-white">
+        <div class="container mx-auto">
+            <div class="mb-10">
+                <span class="inline-block bg-[#FFF8E0] text-gold text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg mb-3">
+                    Testimonials
+                </span>
+                <h2 class="font-space font-bold text-3xl md:text-4xl text-navy">What our clients say</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white rounded-2xl p-6 border border-[#E5E5E5]">
+                    <div class="text-gold text-sm mb-3">★★★★★</div>
+                    <p class="text-[#444545] text-sm leading-relaxed mb-4">
+                        "Clear pricing, no surprises. The platform made comparing plots incredibly easy."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-navy font-bold">RI</div>
+                        <div>
+                            <p class="font-bold text-navy text-sm">Rafiqul Islam</p>
+                            <p class="text-[#777777] text-xs">Purbachal, Dhaka</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white rounded-2xl p-6 border border-[#E5E5E5]">
+                    <div class="text-gold text-sm mb-3">★★★★★</div>
+                    <p class="text-[#444545] text-sm leading-relaxed mb-4">
+                        "Booked our plot within a week of visiting the site. The team was responsive throughout."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-navy font-bold">NJ</div>
+                        <div>
+                            <p class="font-bold text-navy text-sm">Nusrat Jahan</p>
+                            <p class="text-[#777777] text-xs">Gulshan, Dhaka</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white rounded-2xl p-6 border border-[#E5E5E5]">
+                    <div class="text-gold text-sm mb-3">★★★★★</div>
+                    <p class="text-[#444545] text-sm leading-relaxed mb-4">
+                        "The master plan tool helped us pick a plot near the green zone exactly as we wanted."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-navy font-bold">KH</div>
+                        <div>
+                            <p class="font-bold text-navy text-sm">Kamal Hossain</p>
+                            <p class="text-[#777777] text-xs">Bashundhara, Dhaka</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card bg-white rounded-2xl p-6 border border-[#E5E5E5]">
+                    <div class="text-gold text-sm mb-3">★★★★★</div>
+                    <p class="text-[#444545] text-sm leading-relaxed mb-4">
+                        "Clear pricing, no surprises. The platform made comparing plots incredibly easy."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-navy font-bold">RI</div>
+                        <div>
+                            <p class="font-bold text-navy text-sm">Md. Rifat Islam</p>
+                            <p class="text-[#777777] text-xs">Purbachal, Dhaka</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ + CONTACT ===== -->
+    <section class="py-16 px-6 md:px-16 lg:px-32 bg-[#F7F7F5]">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- FAQ -->
+                <div class="lg:w-1/2">
+                    <span class="inline-block bg-[#FFF8E0] text-gold text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg mb-3">
+                        FAQ
+                    </span>
+                    <h3 class="font-space font-bold text-2xl text-navy mb-6">Common questions</h3>
+
+                    <div class="space-y-1">
+                        <div class="faq-item border-b border-[#E5E5E5] py-4">
+                            <div class="flex justify-between items-center">
+                                <span class="font-space font-bold text-navy text-sm">How do I book a plot?</span>
+                                <span class="faq-icon text-navy text-xl font-bold transition">+</span>
+                            </div>
+                            <div class="faq-answer text-[#777777] text-sm">Booking is simple — choose your plot, submit the booking form, and pay the initial deposit. Our team will guide you through the rest.</div>
+                        </div>
+                        <div class="faq-item border-b border-[#E5E5E5] py-4">
+                            <div class="flex justify-between items-center">
+                                <span class="font-space font-bold text-navy text-sm">What payment plans are available?</span>
+                                <span class="faq-icon text-navy text-xl font-bold transition">+</span>
+                            </div>
+                            <div class="faq-answer text-[#777777] text-sm">We offer flexible installment plans including 12-month, 24-month, and custom plans. Contact our team for details.</div>
+                        </div>
+                        <div class="faq-item border-b border-[#E5E5E5] py-4">
+                            <div class="flex justify-between items-center">
+                                <span class="font-space font-bold text-navy text-sm">Is the land title verified?</span>
+                                <span class="faq-icon text-navy text-xl font-bold transition">+</span>
+                            </div>
+                            <div class="faq-answer text-[#777777] text-sm">Yes, all plots come with verified and clear titles. We ensure full legal documentation for every transaction.</div>
+                        </div>
+                        <div class="faq-item border-b border-[#E5E5E5] py-4">
+                            <div class="flex justify-between items-center">
+                                <span class="font-space font-bold text-navy text-sm">Can I transfer my plot later?</span>
+                                <span class="faq-icon text-navy text-xl font-bold transition">+</span>
+                            </div>
+                            <div class="faq-answer text-[#777777] text-sm">Yes, plots can be transferred with proper documentation. Our team will assist with the transfer process.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:w-1/2 bg-white rounded-2xl p-8 border border-[#E5E5E5]">
+                    <h3 class="font-space font-bold text-xl text-navy mb-4">Send an Inquiry</h3>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" placeholder="Name" class="input-field bg-[#F7F7F5] border border-[#E5E5E5] rounded-xl px-4 py-3 text-sm focus:outline-none" />
+                            <input type="tel" placeholder="Phone" class="input-field bg-[#F7F7F5] border border-[#E5E5E5] rounded-xl px-4 py-3 text-sm focus:outline-none" />
+                        </div>
+                        <input type="email" placeholder="Email" class="input-field w-full bg-[#F7F7F5] border border-[#E5E5E5] rounded-xl px-4 py-3 text-sm focus:outline-none" />
+                        <input type="text" placeholder="Interested Plot / Project" class="input-field w-full bg-[#F7F7F5] border border-[#E5E5E5] rounded-xl px-4 py-3 text-sm focus:outline-none" />
+                        <textarea placeholder="Message" rows="4" class="input-field w-full bg-[#F7F7F5] border border-[#E5E5E5] rounded-xl px-4 py-3 text-sm focus:outline-none resize-none"></textarea>
+                        <button type="submit" class="btn btn-primary w-full py-3 text-sm">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-white border-t border-[#E5E5E5] pt-12 pb-6 px-6 md:px-16 lg:px-32">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="assets/images/logo/R_City_logo.svg" alt="Purbachal Royal City Logo" class="h-9 w-auto" />
+                    </div>
+                    <p class="text-[#828282] text-sm leading-relaxed">
+                        A data-driven view into Purbachal Royal City's plots, projects, and payment plans.
+                    </p>
+                </div>
+
+                <!-- Platform -->
+                <div>
+                    <h4 class="text-[#1D1D1D] text-xs font-bold uppercase tracking-wider mb-4">Platform</h4>
+                    <ul class="space-y-2 text-[#828282] text-sm">
+                        <li><a href="#" class="footer-link">Properties</a></li>
+                        <li><a href="#" class="footer-link">Master Plan</a></li>
+                        <li><a href="#" class="footer-link">Offers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="text-[#1D1D1D] text-xs font-bold uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-2 text-[#828282] text-sm">
+                        <li><a href="#" class="footer-link">About</a></li>
+                        <li><a href="#" class="footer-link">Gallery</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-[#1D1D1D] text-xs font-bold uppercase tracking-wider mb-4">Legal</h4>
+                    <ul class="space-y-2 text-[#828282] text-sm">
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-[#333333] pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-[#8A8A88] text-xs">© 2026 Purbachal Royal City</p>
+                <div class="flex gap-4 text-[#8A8A88] text-xs">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ===== FLOATING WHATSAPP ===== -->
+    <a href="https://wa.me/8802222274358" target="_blank" class="whatsapp-float fixed bottom-6 right-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl hover:bg-green-600 transition-all hover:scale-110 group">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip absolute right-full mr-4 bg-navy text-white px-4 py-2 rounded-lg text-sm font-bangla whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+            আমাদের সাথে কথা বলুন
+        </span>
+    </a>
+    <!-- ===== SCRIPTS ===== -->
+    <script src="js/main.js"></script>
+    <script src="js/interactions.js"></script>
+</body>
+</html>

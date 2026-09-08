@@ -149,15 +149,26 @@ body {
     inset: 0;
     background-size: cover;
     background-position: center;
-    opacity: 0;
-    transform: scale(1.08);
-    transition: opacity 1.5s ease, transform 6s ease;
-    will-change: opacity, transform;
+    transform: translateX(100%);
+    visibility: hidden;
+    will-change: transform;
+}
+
+.hero-slide-prev {
+    transform: translateX(-100%);
+    visibility: visible;
 }
 
 .hero-slide-active {
-    opacity: 1;
-    transform: scale(1);
+    transform: translateX(0);
+    visibility: visible;
+    z-index: 1;
+}
+
+.hero-slide,
+.hero-slide-prev,
+.hero-slide-next {
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .hero-dot {

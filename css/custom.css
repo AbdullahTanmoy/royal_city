@@ -140,7 +140,8 @@ body {
 
 /* ===== HERO ===== */
 .hero-gradient {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.55) 100%);
+    background:
+        linear-gradient(180deg, rgba(23, 24, 24, 0.55) 0%, rgba(23, 24, 24, 0.25) 30%, rgba(23, 24, 24, 0.45) 65%, rgba(23, 24, 24, 0.75) 100%);
 }
 
 /* ===== HERO SLIDER ===== */

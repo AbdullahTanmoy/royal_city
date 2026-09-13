@@ -55,6 +55,9 @@ body {
 .font-bangla {
     font-family: 'Hind Siliguri', sans-serif;
 }
+.font-cormorant {
+    font-family: 'Cormorant Garamond', serif;
+}
 
 /* ===== COLORS ===== */
 .text-gold {

@@ -324,8 +324,8 @@
       </div>
     </section>
 
-   <!-- about us -->
-    <section class="about-visible py-16 px-6 md:px-16 lg:px-20 bg-white">
+    <!-- about us -->
+    <section class="about-visible py-16 px-6 md:px-16 lg:px-16 bg-white">
       <div class="container mx-auto">
         <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
           <!-- Left - Image Grid -->
@@ -415,8 +415,8 @@
                   alt="Explore Plots"
                   class="flex-shrink-0 w-11 h-11 rounded-xl object-cover"
                 />
-                <div class="font-space ">
-                  <h4 class=" font-bold text-navy text-base mb-1">
+                <div class="font-space">
+                  <h4 class="font-bold text-navy text-base mb-1">
                     Explore Plots
                   </h4>
                   <p class="text-[#888888] font-light text-sm leading-snug">
@@ -477,7 +477,10 @@
               </div>
             </div>
 
-            <a href="#" class="btn btn-primary font-space text-[14px] px-8 py-3.5 text-sm">
+            <a
+              href="#"
+              class="btn btn-primary font-space text-[14px] px-8 py-3.5 text-sm"
+            >
               Discover Our Story
             </a>
           </div>
@@ -573,7 +576,7 @@
     </section>
 
     <!-- ===== PLOTS SECTION ===== -->
-    <section class="py-16 px-6 md:px-16 lg:px-20 bg-white">
+    <section class="py-16 px-6 md:px-16 lg:px-16 bg-white">
       <div class="container mx-auto">
         <!-- Header -->
         <div
@@ -599,7 +602,9 @@
                 />
               </svg>
             </span>
-            <h2 class="font-cormorant font-bold text-3xl md:text-[40px] text-navy">
+            <h2
+              class="font-cormorant font-bold text-3xl md:text-[40px] text-navy"
+            >
               Find Your Ideal Plot
             </h2>
           </div>
@@ -1038,75 +1043,361 @@
       </div>
     </section>
 
-
     <!-- ===== BENEFITS / WHY INVEST ===== -->
-    <section class="py-16 px-6 md:px-16 lg:px-32 bg-[#F7F7F5]">
+    <section class="py-16 px-6 md:px-16 lg:px-16 bg-white">
       <div class="container mx-auto">
-        <div class="mb-12">
-          <span
-            class="inline-block bg-[#FFF8E0] text-gold text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-lg mb-3"
-          >
-            Project Benefits
-          </span>
-          <h2 class="font-space font-bold text-3xl md:text-4xl text-navy">
-            Why investors choose Royal City
-          </h2>
-        </div>
+        <!-- Two Column Wrapper (equal height on desktop) -->
+        <div
+          class="flex flex-col lg:flex-row lg:items-stretch gap-8 lg:gap-20 bg-[#fffbf2]"
+        >
+          <!-- LEFT DIV -->
+          <div class="lg:flex-1">
+            <!-- OUTER: overflow-visible যাতে minus right নিলেও কাটে না -->
+            <div class="relative h-full min-h-[320px] sm:min-h-[410px] overflow-visible">
+              <!-- INNER: শুধু image rounded + clip হবে -->
+              <div class="relative h-full overflow-hidden rounded-2xl sm:rounded-3xl">
+                <img
+                  src="./assets/images/Designing_developing_residential.jpeg"
+                  alt="Project view"
+                  class="relative inset-0 w-full h-full object-cover object-center z-0"
+                />
 
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
-          <div
-            class="benefit-card bg-navy text-white rounded-2xl p-5 border border-navy"
-          >
-            <span class="font-jetbrains text-gold text-sm block mb-3">01</span>
-            <h4 class="benefit-text font-space font-bold text-sm">
-              Prime Location
-            </h4>
+                <div class="absolute inset-0 bg-black/5 z-10"></div>
+
+                <div
+                  class="pointer-events-none absolute inset-0 ring-1 ring-black/5 rounded-2xl sm:rounded-3xl z-20"
+                ></div>
+              </div>
+
+              <!-- CARD: image-এর উপরে (z-30) + চাইলে negative right দিতে পারবেন -->
+              <div
+                class="absolute bottom-6 sm:bottom-24 left-6 right-6 sm:left-auto sm:-right-12 z-30 w-auto sm:w-[420px] max-w-[calc(100%-2rem)] sm:max-w-[calc(100%-3rem)] bg-[#fffbf2] p-3 sm:py-4 sm:pl-4 sm:pr-0 rounded-[16px] sm:rounded-tl-[20px] sm:rounded-bl-[20px] sm:rounded-tr-[0px] sm:rounded-br-[0px]"
+              >
+               <div class="bg-[#f6f2e9] rounded-[20px] ">
+                  <div
+                  class="bg-white rounded-[14px] sm:rounded-[20px] px-4 py-4 sm:px-6 sm:py-6 shadow-[0_25px_70px_rgba(0,0,0,0.18)] border border-black/5"
+                >
+                  <!-- top row -->
+                  <div class="flex items-center justify-between gap-2 sm:gap-4">
+                    <p class="text-sm sm:text-xl md:text-[24px] font-bold font-space text-[#111827]">
+                      15K
+                      <span class="font-bold font-space text-gray-400">reviews on</span>
+                    </p>
+
+                    <div
+                      class="flex items-center gap-1 text-[#FFC72C] text-sm sm:text-xl leading-none"
+                    >
+                      <span>★</span><span>★</span><span>★</span><span>★</span
+                      ><span>★</span>
+                      <span class="sr-only">5 star rating</span>
+                    </div>
+                  </div>
+
+                  <!-- bottom row -->
+                  <div
+                    class="mt-3 sm:mt-6 flex items-center justify-between gap-2 sm:gap-6"
+                  >
+                    <div class="flex items-center gap-2 sm:gap-5">
+                      <span
+                        class="text-lg sm:text-3xl text-[#111827] leading-none"
+                        >→</span
+                      >
+                      <span
+                        class="text-2xl sm:text-[40px] font-extrabold font-space text-[#111827] leading-none"
+                        >4.9</span
+                      >
+                    </div>
+
+                    <div class="flex items-center -space-x-2 sm:-space-x-6">
+                      <img
+                        class="w-7 h-7 sm:w-14 sm:h-14 rounded-full  object-cover"
+                        src="./assets/images/Ellipse 2.png"
+                        alt="User 1"
+                      />
+                      <img
+                        class="w-7 h-7 sm:w-14 sm:h-14 rounded-full   object-cover"
+                        src="./assets/images/Ellipse 3.png"
+                        alt="User 2"
+                      />
+                      <img
+                        class="w-7 h-7 sm:w-14 sm:h-14 rounded-full  object-cover"
+                        src="./assets/images/Ellipse 4.png"
+                        alt="User 3"
+                      />
+                       <img
+                        class="w-7 h-7 sm:w-14 sm:h-14 rounded-full  object-cover"
+                        src="./assets/images/Ellipse 5.png"
+                        alt="User 3"
+                      />
+                      
+
+                     <img
+                        class="w-7 h-7 sm:w-14 sm:h-14 rounded-full  object-cover"
+                        src="./assets/images/Group 1.png"
+                        alt="User 3"
+                      />
+                    </div>
+                  </div>
+                </div>
+               </div>
+                
+              </div>
+            </div>
           </div>
-          <div
-            class="benefit-card bg-white rounded-2xl p-5 border border-[#E5E5E5]"
-          >
-            <span class="font-jetbrains text-gold text-sm block mb-3">02</span>
-            <h4 class="benefit-text font-space font-bold text-sm">
-              Transparency
-            </h4>
-          </div>
-          <div
-            class="benefit-card bg-white rounded-2xl p-5 border border-[#E5E5E5]"
-          >
-            <span class="font-jetbrains text-gold text-sm block mb-3">03</span>
-            <h4 class="benefit-text font-space font-bold text-sm">
-              Legal Assurance
-            </h4>
-          </div>
-          <div
-            class="benefit-card bg-white rounded-2xl p-5 border border-[#E5E5E5]"
-          >
-            <span class="font-jetbrains text-gold text-sm block mb-3">04</span>
-            <h4 class="benefit-text font-space font-bold text-sm">Expertise</h4>
-          </div>
-          <div
-            class="benefit-card bg-white rounded-2xl p-5 border border-[#E5E5E5]"
-          >
-            <span class="font-jetbrains text-gold text-sm block mb-3">05</span>
-            <h4 class="benefit-text font-space font-bold text-sm">
-              Innovative Technology
-            </h4>
-          </div>
-          <div
-            class="benefit-card bg-white rounded-2xl p-5 border border-[#E5E5E5]"
-          >
-            <span class="font-jetbrains text-gold text-sm block mb-3">06</span>
-            <h4 class="benefit-text font-space font-bold text-sm">
-              Customer Support
-            </h4>
-          </div>
-          <div
-            class="benefit-card bg-white rounded-2xl p-5 border border-[#E5E5E5]"
-          >
-            <span class="font-jetbrains text-gold text-sm block mb-3">07</span>
-            <h4 class="benefit-text font-space font-bold text-sm">
-              Connectivity
-            </h4>
+
+          <!-- RIGHT DIV -->
+          <div class="lg:flex-1 pt-4 pr-4">
+            <div class="h-full flex flex-col">
+              <!-- Heading -->
+              <div class="text-center lg:text-left">
+                <div
+                  class="inline-flex items-center gap-2 text-[16px] tracking-[0.25em] uppercase font-bold font-space text-[#FFC20E]"
+                >
+                  <span>✦</span>
+                  Project Benefits
+                  <span>✦</span>
+                </div>
+
+                <h2
+                  class="mt-4 font-cormorant font-bold text-3xl sm:text-4xl xl:text-[40px] text-[#111827]"
+                >
+                  WHY INVESTORS CHOOSE ROYAL CITY
+                </h2>
+              </div>
+
+              <!-- Cards Grid -->
+              <div
+                class="mt-7 sm:mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 flex-1"
+              >
+                <!-- Card -->
+                <div
+                  class="bg-white rounded-xl border border-[#EEE] shadow-sm p-5 sm:p-4"
+                >
+                  <div class="flex items-center gap-4">
+                    <!-- ICON (img tag) -->
+                    <span
+                      class="shrink-0 w-12 h-12 rounded-xl  grid place-items-center"
+                    >
+                      <img
+                        src="./assets/images/Benefit-3.png"
+                        alt="Location icon"
+                        class="w-10 h-10 object-contain"
+                      />
+                    </span>
+
+                    <div class="font-space">
+                      <h3
+                        class="font-bold text-[18px] text-base sm:text-lg text-[#111827]"
+                      >
+                        01 — Prime Location
+                      </h3>
+                      <p
+                        class="mt-1 text-sm md:text-[16px] font-light text-gray-600 leading-relaxed"
+                      >
+                        Well-connected, high-growth location.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-white rounded-xl border border-[#EEE] shadow-sm p-5 sm:p-4"
+                >
+                  <div class="flex items-center gap-4">
+                    <span
+                      class="shrink-0 w-12 h-12 rounded-xl  grid place-items-center"
+                    >
+                      <img
+                        src="./assets/images/Benefit-2.png"
+                        alt="Transparency icon"
+                        class="w-10 h-10 object-contain"
+                      />
+                    </span>
+                    <div class="font-space">
+                      <h3
+                        class="font-bold text-[20px] text-base sm:text-lg text-[#111827]"
+                      >
+                        02 — Transparency
+                      </h3>
+                      <p
+                        class="mt-1 text-sm md:text-[16px] font-light text-gray-600 leading-relaxed"
+                      >
+                        Clear pricing, no hidden costs.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-white rounded-xl border border-[#EEE] shadow-sm p-5 sm:p-4"
+                >
+                  <div class="flex items-center gap-4">
+                    <span
+                      class="shrink-0 w-12 h-12 rounded-xl  grid place-items-center"
+                    >
+                      <img
+                        src="./assets/images/Benefit-3.png"
+                        alt="Legal icon"
+                        class="w-10 h-10 object-contain"
+                      />
+                    </span>
+                    <div class="font-space">
+                      <h3
+                        class="font-bold text-[20px] text-base sm:text-lg text-[#111827]"
+                      >
+                        03 — Legal Assurance
+                      </h3>
+                      <p
+                        class="mt-1 text-sm md:text-[16px] font-light text-gray-600 leading-relaxed"
+                      >
+                        Verified titles, documented ownership.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-white rounded-xl border border-[#EEE] shadow-sm p-5 sm:p-4"
+                >
+                  <div class="flex items-center gap-4">
+                    <span
+                      class="shrink-0 w-12 h-12 rounded-xl  grid place-items-center"
+                    >
+                      <img
+                        src="./assets/images/Benefit-1.png"
+                        alt="Expertise icon"
+                        class="w-10 h-10 object-contain"
+                      />
+                    </span>
+                    <div class="font-space">
+                      <h3
+                        class="font-bold  text-base sm:text-lg text-[#111827]"
+                      >
+                        04 — Expertise
+                      </h3>
+                      <p
+                        class="mt-1 text-sm md:text-[16px] font-light text-gray-600 leading-relaxed"
+                      >
+                        Years of proven development experience.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-white rounded-xl border border-[#EEE] shadow-sm p-5 sm:p-4"
+                >
+                  <div class="flex items-center gap-4">
+                    <span
+                      class="shrink-0 w-12 h-12 rounded-xl  grid place-items-center"
+                    >
+                      <img
+                        src="./assets/images/Benefit-2.png"
+                        alt="Technology icon"
+                        class="w-10 h-10 object-contain"
+                      />
+                    </span>
+                    <div class="font-space">
+                      <h3
+                        class="font-bold  text-base sm:text-lg text-[#111827]"
+                      >
+                        05 — Innovative Technology
+                      </h3>
+                      <p
+                        class="mt-1 text-sm md:text-[16px] font-light text-gray-600 leading-relaxed"
+                      >
+                        Smart tools for plot search & booking.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-white rounded-xl border border-[#EEE] shadow-sm p-5 sm:p-4"
+                >
+                  <div class="flex items-center gap-4">
+                    <span
+                      class="shrink-0 w-12 h-12 rounded-xl  grid place-items-center"
+                    >
+                      <img
+                        src="./assets/images/Benefit-1.png"
+                        alt="Support icon"
+                        class="w-10 h-10 object-contain"
+                      />
+                    </span>
+                    <div class="font-space">
+                      <h3
+                        class="font-bold  text-base sm:text-lg text-[#111827]"
+                      >
+                        06 — Customer Support
+                      </h3>
+                      <p
+                        class="mt-1 text-sm md:text-[16px] font-light text-gray-600 leading-relaxed"
+                      >
+                        Dedicated help, every step of the way.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-white rounded-xl border border-[#EEE] shadow-sm p-5 sm:p-4"
+                >
+                  <div class="flex items-center gap-4">
+                    <span
+                      class="shrink-0 w-12 h-12 rounded-xl  grid place-items-center"
+                    >
+                      <img
+                        src="./assets/images/Benefit-1.png"
+                        alt="Connectivity icon"
+                        class="w-10 h-10 object-contain"
+                      />
+                    </span>
+                    <div class="font-space">
+                      <h3
+                        class="font-bold  text-base sm:text-lg text-[#111827]"
+                      >
+                        07 — Connectivity
+                      </h3>
+                      <p
+                        class="mt-1 text-sm md:text-[16px] font-light text-gray-600 leading-relaxed"
+                      >
+                        Easy access to and across Dhaka.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-white rounded-xl border border-[#EEE] shadow-sm p-5 sm:p-4"
+                >
+                  <div class="flex items-center gap-4">
+                    <span
+                      class="shrink-0 w-12 h-12 rounded-xl  grid place-items-center"
+                    >
+                      <img
+                        src="./assets/images/Benefit-1.png"
+                        alt="Marketing icon"
+                        class="w-10 h-10 object-contain"
+                      />
+                    </span>
+                    <div class="font-space">
+                      <h3
+                        class="font-bold  text-base sm:text-lg text-[#111827]"
+                      >
+                        08 — Marketing Area
+                      </h3>
+                      <p
+                        class="mt-1 text-sm md:text-[16px] font-light text-gray-600 leading-relaxed"
+                      >
+                        Right buyers, matched to the right plots.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /grid -->
+            </div>
           </div>
         </div>
       </div>
@@ -1184,8 +1475,8 @@
     </section>
 
     <!-- Master plan another -->
-    <section id="master-plan-explorer" class="py-16 md:py-20 bg-white">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-16">
+    <section id="master-plan-explorer" class="py-16 px-6 md:py-20 lg:px-16 bg-white">
+      <div class="container mx-auto ">
         <!-- (RED MARK) Heading / Intro -->
         <div class="text-center max-w-3xl mx-auto">
           <div
@@ -1200,7 +1491,9 @@
             MASTER PLAN EXPLORER
           </h2>
 
-          <p class="mt-4 text-sm sm:text-base text-gray-600 font-space font-light leading-relaxed">
+          <p
+            class="mt-4 text-sm sm:text-base text-gray-600 font-space font-light leading-relaxed"
+          >
             Explore every sector, road, and green zone across Purbachal Royal
             City — planned in detail, before a single plot is sold.
           </p>
@@ -1210,7 +1503,7 @@
         <div class="mt-10">
           <div
             id="mp-tabs"
-            class="flex gap-3 md:gap-4 overflow-x-auto md:overflow-visible pb-2 md:pb-0 justify-start md:justify-center scroll-smooth"
+            class="flex flex-row flex-wrap gap-3 md:gap-4  pb-2 md:pb-0 justify-start md:justify-center scroll-smooth"
           >
             <!-- Residential Sectors (Active) -->
             <button
@@ -1697,7 +1990,7 @@
             <div
               class="rounded-3xl border border-[#FFC20E] bg-white p-5 sm:p-8"
             >
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <p
                     class="text-[14px] tracking-[0.2em] uppercase text-[#696A6A] font-space font-semibold mb-[24px]"
@@ -1848,7 +2141,7 @@
             <div
               class="rounded-3xl border border-[#E8D58A] bg-white p-5 sm:p-8"
             >
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <p
                     class="text-[14px] tracking-[0.2em] uppercase text-[#696A6A] font-space font-semibold mb-[24px]"
@@ -1999,7 +2292,7 @@
             <div
               class="rounded-3xl border border-[#E8D58A] bg-white p-5 sm:p-8"
             >
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <p
                     class="text-[14px] tracking-[0.2em] uppercase text-[#696A6A] font-space font-semibold mb-[24px]"
@@ -2150,7 +2443,7 @@
             <div
               class="rounded-3xl border border-[#E8D58A] bg-white p-5 sm:p-8"
             >
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <p
                     class="text-[14px] tracking-[0.2em] uppercase text-[#696A6A] font-space font-semibold mb-[24px]"
@@ -2301,7 +2594,7 @@
             <div
               class="rounded-3xl border border-[#E8D58A] bg-white p-5 sm:p-8"
             >
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <p
                     class="text-[14px] tracking-[0.2em] uppercase text-[#696A6A] font-space font-semibold mb-[24px]"
@@ -2454,7 +2747,7 @@
             <div
               class="rounded-3xl border border-[#E8D58A] bg-white p-5 sm:p-8"
             >
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <p
                     class="text-[14px] tracking-[0.2em] uppercase text-[#696A6A] font-space font-semibold mb-[24px]"

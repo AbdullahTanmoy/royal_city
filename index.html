@@ -221,22 +221,33 @@
 
       <!-- Hero Content -->
       <div
-        class="relative z-10 container mx-auto px-6 md:px-16 xl:px-0 pt-40 pb-20 min-h-screen flex flex-col justify-center"
+        class="relative z-10 container mx-auto px-6 md:px-16  pt-40 pb-20 min-h-screen flex flex-col justify-center"
       >
         <div class="max-w-4xl">
           <!-- Badge -->
-          <div
-            class="inline-flex items-center gap-2 bg-white rounded-full px-4 py-1.5 border border-[#E5E5E5] mb-6"
-          >
-            <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
-            <span class="text-[#444545] text-xs font-semibold tracking-wide"
-              >PURBACHAL ROYAL CITY</span
+         <span
+              class="inline-flex items-center gap-2  text-[#FFC20E] text-sm md:text-[18px] font-bold font-space uppercase tracking-wider px-5 py-2 rounded-lg mb-4"
             >
-          </div>
+              <!-- Left Sparkle -->
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c0 6.627 5.373 12 12 12-6.627 0-12 5.373-12 12 0-6.627-5.373-12-12-12C6.627 12 12 6.627 12 0z"
+                />
+              </svg>
+
+              Purbachal Royal City
+
+              <!-- Right Sparkle -->
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c0 6.627 5.373 12 12 12-6.627 0-12 5.373-12 12 0-6.627-5.373-12-12-12C6.627 12 12 6.627 12 0z"
+                />
+              </svg>
+            </span>
 
           <!-- Title -->
           <h1
-            class="hero-title text-white font-space font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-6"
+            class="hero-title text-white font-cormorant font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-6"
           >
             Find Your Place in a <br class="hidden sm:block" />
             Better-Planned Future
@@ -251,7 +262,7 @@
           </p>
 
           <!-- Buttons -->
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-wrap gap-4 font-space">
             <a href="#" class="btn btn-primary px-16 md:px-8 py-3.5 text-base">
               Browse Plots
             </a>
@@ -269,8 +280,8 @@
             </a>
           </div>
         </div>
-
-        <!-- Stats Bar -->
+        <div class="max-w-6xl p-0 xl:pl-[200px]">
+         <!-- Stats Bar -->
         <div
           class="mt-16 md:mt-20 border border-[#FFD65E] rounded-lg p-6 md:p-8 flex flex-wrap items-center justify-around gap-4"
         >
@@ -307,6 +318,8 @@
             </div>
           </div>
         </div>
+        </div>
+        
       </div>
 
       <!-- Carousel Dots -->
@@ -483,93 +496,6 @@
             >
               Discover Our Story
             </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== QUICK LINKS / SERVICES ===== -->
-    <section class="py-16 px-6 md:px-16 lg:px-32 bg-white hidden">
-      <div class="container mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-          <!-- Card 1 -->
-          <div
-            class="card-hover bg-white rounded-2xl border border-[#E5E5E5] p-6 text-center"
-          >
-            <div
-              class="w-12 h-12 bg-[#F7F7F5] rounded-xl flex items-center justify-center mx-auto mb-3"
-            >
-              <span class="text-2xl text-navy">?</span>
-            </div>
-            <div class="text-xs text-[#777777] font-jetbrains font-medium mb-1">
-              01
-            </div>
-            <h3 class="font-space font-bold text-navy text-sm mb-1">
-              Explore Plots
-            </h3>
-            <p class="text-[#777777] text-xs">
-              Browse all available and featured plots.
-            </p>
-          </div>
-
-          <!-- Card 2 -->
-          <div
-            class="card-hover bg-white rounded-2xl border border-[#E5E5E5] p-6 text-center"
-          >
-            <div
-              class="w-12 h-12 bg-[#F7F7F5] rounded-xl flex items-center justify-center mx-auto mb-3"
-            >
-              <span class="text-2xl text-navy">?</span>
-            </div>
-            <div class="text-xs text-[#777777] font-jetbrains font-medium mb-1">
-              02
-            </div>
-            <h3 class="font-space font-bold text-navy text-sm mb-1">
-              Master Plan
-            </h3>
-            <p class="text-[#777777] text-xs">
-              View the complete township layout.
-            </p>
-          </div>
-
-          <!-- Card 3 -->
-          <div
-            class="card-hover bg-white rounded-2xl border border-[#E5E5E5] p-6 text-center"
-          >
-            <div
-              class="w-12 h-12 bg-[#F7F7F5] rounded-xl flex items-center justify-center mx-auto mb-3"
-            >
-              <span class="text-2xl text-navy">%</span>
-            </div>
-            <div class="text-xs text-[#777777] font-jetbrains font-medium mb-1">
-              03
-            </div>
-            <h3 class="font-space font-bold text-navy text-sm mb-1">
-              Current Offers
-            </h3>
-            <p class="text-[#777777] text-xs">
-              Active discounts and payment plans.
-            </p>
-          </div>
-
-          <!-- Card 4 -->
-          <div
-            class="card-hover bg-white rounded-2xl border border-[#E5E5E5] p-6 text-center"
-          >
-            <div
-              class="w-12 h-12 bg-[#F7F7F5] rounded-xl flex items-center justify-center mx-auto mb-3"
-            >
-              <span class="text-2xl text-navy">�</span>
-            </div>
-            <div class="text-xs text-[#777777] font-jetbrains font-medium mb-1">
-              04
-            </div>
-            <h3 class="font-space font-bold text-navy text-sm mb-1">
-              Project Facilities
-            </h3>
-            <p class="text-[#777777] text-xs">
-              Roads, security, utilities, and more.
-            </p>
           </div>
         </div>
       </div>
@@ -3041,7 +2967,7 @@
     </section>
 
     <!-- ===== GALLERY ===== -->
-    <section class="py-16 px-6 md:px-16 lg:px-32 bg-[#F7F7F5]">
+    <section class="py-16 px-6 md:px-16 lg:px-32 bg-[#F7F7F5] hidden">
       <div class="container mx-auto">
         <div
           class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10"
@@ -3109,6 +3035,254 @@
         </div>
       </div>
     </section>
+   
+   <!-- Gallery new -->
+    <section class="py-12 sm:py-16 lg:py-20 px-6 lg:px-16 bg-white overflow-hidden">
+  <div class="container mx-auto">
+
+    <!-- ============================================ -->
+    <!-- SIMPLE GRID: Mobile, Tablet(md), Laptop(lg)  -->
+    <!-- Hidden at xl and above                        -->
+    <!-- ============================================ -->
+    <div class="xl:hidden">
+
+      <!-- Heading -->
+      <div class="text-center mb-10">
+        <div class="inline-flex items-center gap-2 text-[16px] tracking-[0.25em] uppercase font-bold font-space text-[#FFC20E] mb-3">
+          <span>✦</span>
+          Gallery
+          <span>✦</span>
+        </div>
+        <h2 class="font-cormorant font-bold text-3xl sm:text-4xl text-[#111827] mb-4">
+          Inside Royal City
+        </h2>
+        <p class="text-[#666666] text-sm leading-relaxed font-space max-w-xl mx-auto">
+          A closer look at the township — from progress on the ground to
+          life within the community.
+        </p>
+      </div>
+
+      <!-- Grid: 1 col mobile, 2 col tablet, 3 col laptop -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="relative rounded-2xl overflow-hidden h-[260px]">
+          <img src="./assets/images/gallery-education-1.jpg" alt="Education" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Education</span>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden h-[260px]">
+          <img src="./assets/images/gallery-roads-1.jpg" alt="Roads & Connectivity" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Roads &amp; Connectivity</span>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden h-[260px]">
+          <img src="./assets/images/gallery-green-1.jpg" alt="Green Spaces" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Green Spaces</span>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden h-[260px]">
+          <img src="./assets/images/gallery-security-1.jpg" alt="Security" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Security</span>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden h-[260px]">
+          <img src="./assets/images/gallery-green-2.jpg" alt="Green Spaces" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Green Spaces</span>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden h-[260px]">
+          <img src="./assets/images/gallery-utilities-1.jpg" alt="Utilities" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Utilities</span>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden h-[260px]">
+          <img src="./assets/images/gallery-education-2.jpg" alt="Education" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Education</span>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden h-[260px]">
+          <img src="./assets/images/gallery-green-3.jpg" alt="Green Spaces" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Green Spaces</span>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden h-[260px]">
+          <img src="./assets/images/gallery-utilities-2.jpg" alt="Utilities" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Utilities</span>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden h-[260px]">
+          <img src="./assets/images/gallery-green-4.jpg" alt="Green Spaces" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Green Spaces</span>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden h-[260px]">
+          <img src="./assets/images/gallery-security-2.jpg" alt="Security" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Security</span>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden h-[260px]">
+          <img src="./assets/images/gallery-green-5.jpg" alt="Green Spaces" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Green Spaces</span>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden h-[260px]">
+          <img src="./assets/images/gallery-education-3.jpg" alt="Education" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Education</span>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden h-[260px]">
+          <img src="./assets/images/gallery-roads-2.jpg" alt="Roads & Connectivity" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Roads &amp; Connectivity</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- COMPLEX MASONRY: xl and above only            -->
+    <!-- Picture-perfect layout                        -->
+    <!-- ============================================ -->
+    <div class="hidden xl:flex items-start gap-4">
+
+      <!-- LEFT PAIR: Col A (Education/Roads) + Col B (Green/Security/Green) -->
+      <div class="flex gap-4">
+        <div class="flex flex-col gap-4 w-[150px]">
+          <div class="relative rounded-2xl overflow-hidden h-[220px]">
+            <img src="./assets/images/Open_land_development_in_Purbachal.jpeg" alt="Education" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Education</span>
+          </div>
+          <div class="relative rounded-2xl overflow-hidden h-[220px]">
+            <img src="./assets/images/Transforming_open_land_into_plots.jpeg" alt="Roads & Connectivity" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Roads &amp; Connectivity</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4 w-[150px]">
+          <div class="relative rounded-2xl overflow-hidden h-[140px]">
+            <img src="./assets/images/Life-community.png" alt="Green Spaces" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Green Spaces</span>
+          </div>
+          <div class="relative rounded-2xl overflow-hidden h-[140px]">
+            <img src="./assets/images/Architectural_visualization_of_day.jpeg" alt="Security" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Security</span>
+          </div>
+          <div class="relative rounded-2xl overflow-hidden h-[140px]">
+            <img src="./assets/images/Architectural_visualization_of_sunset.jpeg" alt="Green Spaces" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Green Spaces</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMN C: Utilities -->
+      <div class="w-[170px] mt-[60px]">
+        <div class="relative rounded-2xl overflow-hidden h-[350px]">
+          <img src="./assets/images/Life-utility.png" alt="Utilities" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Utilities</span>
+        </div>
+      </div>
+
+      <!-- CENTER GROUP: Heading + Education/Green Spaces -->
+      <div class="flex flex-col items-center">
+        <div class="w-[300px] text-center mb-8">
+          <div class="inline-flex items-center gap-2 text-[16px] tracking-[0.25em] uppercase font-bold font-space text-[#FFC20E] mb-3">
+            <span>✦</span>
+            Gallery
+            <span>✦</span>
+          </div>
+          <h2 class="font-cormorant font-bold text-4xl text-[#111827] mb-2">
+            Inside Royal City
+          </h2>
+          <p class="text-[#666666] text-[14px] leading-relaxed font-space font-light">
+            A closer look at the township — from progress on the ground to
+            life within the community.
+          </p>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-[170px]">
+            <div class="relative rounded-2xl overflow-hidden h-[260px]">
+              <img src="./assets/images/Designing_developing_residential.jpeg" alt="Education" class="absolute inset-0 w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+              <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Education</span>
+            </div>
+          </div>
+          <div class="w-[170px] ">
+            <div class="relative rounded-2xl overflow-hidden h-[260px]">
+              <img src="./assets/images/Life-community.png" alt="Green Spaces" class="absolute inset-0 w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+              <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Green Spaces</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMN E: Utilities (mirror) -->
+      <div class="w-[170px] mt-[60px]">
+        <div class="relative rounded-2xl overflow-hidden h-[350px]">
+          <img src="./assets/images/Life-utility.png" alt="Utilities" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Utilities</span>
+        </div>
+      </div>
+
+      <!-- RIGHT PAIR: Col F + Col G (mirror) -->
+      <div class="flex gap-4">
+        <div class="flex flex-col gap-4 w-[150px] ">
+          <div class="relative rounded-2xl overflow-hidden h-[140px]">
+            <img src="./assets/images/Open_land_development_visualization.jpeg" alt="Green Spaces" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Green Spaces</span>
+          </div>
+          <div class="relative rounded-2xl overflow-hidden h-[140px]">
+            <img src="./assets/images/life-health.png" alt="Security" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Security</span>
+          </div>
+          <div class="relative rounded-2xl overflow-hidden h-[140px]">
+            <img src="./assets/images/Residential_development_master_plan.jpeg" alt="Green Spaces" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Green Spaces</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4 w-[150px]">
+          <div class="relative rounded-2xl overflow-hidden h-[220px]">
+            <img src="./assets/images/Designing_developing_residential.jpeg" alt="Education" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Education</span>
+          </div>
+          <div class="relative rounded-2xl overflow-hidden h-[220px]">
+            <img src="./assets/images/Life-utility.png" alt="Roads & Connectivity" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold font-space">Roads &amp; Connectivity</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
     <!-- ===== TESTIMONIALS ===== -->
     <section class="py-12 sm:py-16 lg:py-20 px-6 lg:px-16 bg-white">

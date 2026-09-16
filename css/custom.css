@@ -445,6 +445,27 @@ body {
     }
 }
 
+/* ===== LIFESTYLE IMAGE MODAL ===== */
+#lifestyle-modal {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#lifestyle-modal.is-open {
+    visibility: visible;
+    opacity: 1;
+}
+#lifestyle-modal .modal-content {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scale(0.92);
+    opacity: 0;
+}
+#lifestyle-modal.is-open .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
 /* ===== OFFER CARDS ===== */
 .offer-card {
     transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);

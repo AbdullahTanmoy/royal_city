@@ -385,3 +385,42 @@ document.querySelectorAll(".benefit-card").forEach((card) => {
   goTo(0);
   startAutoplay();
 })();
+
+// ===== LIFESTYLE IMAGE MODAL =====
+(function () {
+  const gallery = document.getElementById("lifestyle-gallery");
+  const modal = document.getElementById("lifestyle-modal");
+  if (!gallery || !modal) return;
+
+  const modalImg = document.getElementById("lifestyle-modal-img");
+  const closeBtn = document.getElementById("lifestyle-modal-close");
+  const backdrop = modal.querySelector(".modal-backdrop");
+
+  function openModal(img) {
+    modalImg.src = img.currentSrc || img.src;
+    modalImg.alt = img.alt || "";
+    modal.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    modal.classList.remove("is-open");
+    document.body.style.overflow = "";
+  }
+
+  // Open on any image click inside the "lifestyle another" gallery
+  gallery.addEventListener("click", (e) => {
+    const img = e.target.closest("img[src]");
+    if (!img || !gallery.contains(img)) return;
+    openModal(img);
+  });
+
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (backdrop) backdrop.addEventListener("click", closeModal);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("is-open")) {
+      closeModal();
+    }
+  });
+})();

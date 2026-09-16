@@ -334,3 +334,130 @@ document.querySelectorAll(".benefit-card").forEach((card) => {
 
   setActive(initial, { scrollIntoView: false });
 })();
+
+// ===== TESTIMONIAL CAROUSEL =====
+(function () {
+  const carousel = document.querySelector(".testimonial-carousel");
+  if (!carousel) return;
+
+  const track = carousel.querySelector(".testimonial-slide-group");
+  const slides = Array.from(track.querySelectorAll(".testimonial-slide"));
+  const prevBtn = carousel.querySelector(".testimonial-prev");
+  const nextBtn = carousel.querySelector(".testimonial-next");
+  const dotsContainer = carousel.querySelector(".testimonial-dots");
+
+  if (!slides.length || !prevBtn || !nextBtn || !dotsContainer) return;
+
+  let currentIndex = 0;
+  let autoplayTimer = null;
+
+  function getVisibleCount() {
+    const w = window.innerWidth;
+    if (w >= 1024) return 4;
+    if (w >= 640) return 2;
+    return 1;
+  }
+
+  function getMaxIndex() {
+    const visible = getVisibleCount();
+    return Math.max(0, slides.length - visible);
+  }
+
+  function buildDots() {
+    dotsContainer.innerHTML = "";
+    const maxIdx = getMaxIndex();
+    for (let i = 0; i <= maxIdx; i++) {
+      const dot = document.createElement("button");
+      dot.setAttribute("aria-label", "Go to slide " + (i + 1));
+      if (i === currentIndex) dot.classList.add("active");
+      dot.addEventListener("click", () => {
+        goTo(i);
+        resetAutoplay();
+      });
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function updateDots() {
+    const dots = dotsContainer.querySelectorAll("button");
+    dots.forEach((d, i) => d.classList.toggle("active", i === currentIndex));
+  }
+
+  function goTo(index) {
+    const maxIdx = getMaxIndex();
+    currentIndex = Math.max(0, Math.min(index, maxIdx));
+    const slideWidth = 100 / getVisibleCount();
+    track.style.transform = "translateX(-" + currentIndex * slideWidth + "%)";
+    updateDots();
+  }
+
+  function next() {
+    const maxIdx = getMaxIndex();
+    goTo(currentIndex >= maxIdx ? 0 : currentIndex + 1);
+  }
+
+  function prev() {
+    const maxIdx = getMaxIndex();
+    goTo(currentIndex <= 0 ? maxIdx : currentIndex - 1);
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(next, 4000);
+  }
+
+  function stopAutoplay() {
+    if (autoplayTimer) clearInterval(autoplayTimer);
+  }
+
+  function resetAutoplay() {
+    stopAutoplay();
+    startAutoplay();
+  }
+
+  prevBtn.addEventListener("click", () => {
+    prev();
+    resetAutoplay();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    next();
+    resetAutoplay();
+  });
+
+  // Touch / swipe support
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  track.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    stopAutoplay();
+  }, { passive: true });
+
+  track.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) next();
+      else prev();
+    }
+    startAutoplay();
+  }, { passive: true });
+
+  // Pause autoplay on hover
+  carousel.addEventListener("mouseenter", stopAutoplay);
+  carousel.addEventListener("mouseleave", startAutoplay);
+
+  // Rebuild dots and clamp index on resize
+  window.addEventListener("resize", () => {
+    const maxIdx = getMaxIndex();
+    if (currentIndex > maxIdx) currentIndex = maxIdx;
+    buildDots();
+    goTo(currentIndex);
+  });
+
+  // Init
+  buildDots();
+  goTo(0);
+  startAutoplay();
+})();

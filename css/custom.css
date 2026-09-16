@@ -382,13 +382,67 @@ body {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== TESTIMONIAL ===== */
+/* ===== TESTIMONIAL CAROUSEL ===== */
 .testimonial-card {
     transition: all 0.3s ease;
+    height: 100%;
 }
 .testimonial-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+}
+.testimonial-carousel {
+    padding: 0 1rem;
+}
+@media (min-width: 1024px) {
+    .testimonial-carousel {
+        padding: 0 2rem;
+    }
+}
+.testimonial-track {
+    position: relative;
+}
+.testimonial-slide {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+@media (min-width: 640px) {
+    .testimonial-slide {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+.testimonial-dots button {
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background-color: #E5E5E5;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+.testimonial-dots button.active {
+    background-color: #C9A84C;
+    width: 24px;
+}
+.testimonial-prev,
+.testimonial-next {
+    opacity: 1;
+    transition: all 0.3s ease, opacity 0.3s ease;
+}
+@media (max-width: 639px) {
+    .testimonial-prev,
+    .testimonial-next {
+        width: 2.25rem !important;
+        height: 2.25rem !important;
+    }
+    .testimonial-prev {
+        left: -0.25rem !important;
+    }
+    .testimonial-next {
+        right: -0.25rem !important;
+    }
 }
 
 /* ===== OFFER CARDS ===== */

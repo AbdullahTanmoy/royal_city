@@ -424,3 +424,51 @@ document.querySelectorAll(".benefit-card").forEach((card) => {
     }
   });
 })();
+
+
+
+
+// Gallery image modal
+(function () {
+  const gallery = document.getElementById("gallery-lightbox");
+  const modal = document.getElementById("gallery-modal");
+  if (!gallery || !modal) return;
+
+  const modalImg = document.getElementById("gallery-modal-img");
+  const closeBtn = document.getElementById("gallery-modal-close");
+  const backdrop = modal.querySelector(".modal2-backdrop");
+
+  function openModal(img) {
+    modalImg.src = img.currentSrc || img.src;
+    modalImg.alt = img.alt || "";
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.style.overflow = "";
+  }
+
+  gallery.addEventListener("click", (e) => {
+    // Card wrapper-take target korলাম, direct img-take na
+    const card = e.target.closest(".relative.rounded-2xl.overflow-hidden");
+    if (!card || !gallery.contains(card)) return;
+
+    const img = card.querySelector("img[src]");
+    if (!img) return;
+
+    openModal(img);
+  });
+
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (backdrop) backdrop.addEventListener("click", closeModal);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+      closeModal();
+    }
+  });
+})();

@@ -163,6 +163,15 @@ body {
     visibility: hidden;
     will-change: transform;
 }
+.hero-slide-about{
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    /* transform: translateX(100%);
+    visibility: hidden;
+    will-change: transform; */
+}
 
 .hero-slide-prev {
     transform: translateX(-100%);

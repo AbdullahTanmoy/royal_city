@@ -79,7 +79,7 @@
         <!-- Desktop Menu -->
         <div class="hidden lg:flex items-center gap-1">
           <a href="../index.html" class="nav-link">Home</a>
-          <a href="./about.html" class="nav-link ">About</a>
+          <a href="./about.html" class="nav-link">About</a>
           <a href="#plots" class="nav-link">Plots</a>
           <a href="#master-plan" class="nav-link">Master Plan</a>
           <a href="#lifestyle" class="nav-link">Lifestyle</a>
@@ -148,14 +148,14 @@
               <li>
                 <a
                   href="#home"
-                  class="mobile-nav-link  block px-5 py-4 rounded-2xl text-navy font-bold text-lg md:text-xl hover:bg-[#FFF8E0] transition-all duration-300 text-center"
+                  class="mobile-nav-link block px-5 py-4 rounded-2xl text-navy font-bold text-lg md:text-xl hover:bg-[#FFF8E0] transition-all duration-300 text-center"
                   >Home</a
                 >
               </li>
               <li>
                 <a
                   href="pages/about.html"
-                  class="mobile-nav-link  block px-5 py-4 rounded-2xl text-navy font-bold text-lg md:text-xl hover:bg-[#FFF8E0] transition-all duration-300 text-center"
+                  class="mobile-nav-link block px-5 py-4 rounded-2xl text-navy font-bold text-lg md:text-xl hover:bg-[#FFF8E0] transition-all duration-300 text-center"
                   >About</a
                 >
               </li>
@@ -207,9 +207,243 @@
       </div>
     </div>
 
-   
+    <!-- ===== HERO SECTION ===== -->
+    <section
+      class="relative w-full min-h-[55vh] sm:min-h-[60vh] md:min-h-[65vh] overflow-hidden"
+    >
+      <!-- Background Image Slider -->
+      <div class="absolute inset-0">
+        <div
+          class="hero-slide-about"
+          style="
+            background-image: url(&quot;../assets/images/Aboutusbannerpic.jpg&quot;);
+          "
+        ></div>
+      </div>
 
-    
+      <!-- Full-Section Dark Overlay (covers the entire hero, above the background) -->
+      <div class="absolute inset-0 z-[2] bg-black/75 pointer-events-none"></div>
+
+      <!-- Hero Content -->
+      <div
+        class="relative z-10 container mx-auto px-4 md:px-16 pt-20 md:pt-40 pb-16 md:pb-20 min-h-[55vh] sm:min-h-[60vh] md:min-h-[65vh] flex justify-center"
+      >
+        <!-- <div class="max-w-4xl">
+          
+          <span
+            class="inline-flex items-center gap-2 text-[#FFC20E] text-sm md:text-[18px] font-bold font-space uppercase tracking-wider pr-5 py-2 rounded-lg mb-2 md:mb-4"
+          >
+         
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0c0 6.627 5.373 12 12 12-6.627 0-12 5.373-12 12 0-6.627-5.373-12-12-12C6.627 12 12 6.627 12 0z"
+              />
+            </svg>
+
+            Purbachal Royal City
+
+       
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0c0 6.627 5.373 12 12 12-6.627 0-12 5.373-12 12 0-6.627-5.373-12-12-12C6.627 12 12 6.627 12 0z"
+              />
+            </svg>
+          </span>
+
+         
+          <h1
+            class="hero-title text-white font-cormorant font-bold  lg:text-7xl leading-[1.1] mb-3 md:mb-6"
+          >
+            <Span class="">Find Your place in a </Span> <br class="hidden sm:block" />
+            <span class="">Better-Planned Future</span>
+          </h1>
+
+        
+          <p
+            class="font-space text-white/80 text-[14px] md:text-xl max-w-2xl mb-6 md:mb-10 leading-relaxed"
+          >
+            A data-driven view into every plot, project, and payment plan across
+            Royal City - search, compare, and book in minutes.
+          </p>
+
+        
+        </div> -->
+        <!-- Small text (breadcrumb) -->
+        <div
+          class="absolute top-[104px] md:top-[110px] left-4 md:left-16 flex items-center gap-2 font-space text-xs sm:text-sm md:text-base"
+        >
+          <a
+            href="../index.html"
+            class="text-white/90 hover:text-[#FFC20E] transition-colors"
+          >
+            Home
+          </a>
+          <span class="text-white/50">›</span>
+          <span class="text-[#FFC20E] font-semibold">About Us</span>
+          <span class="hidden sm:block w-8 h-px bg-[#FFC20E]/70"></span>
+        </div>
+
+        <!-- Title + Description -->
+        <div class="max-w-2xl mx-auto text-center pt-20 md:pt-5 lg:pt-10">
+          <h1
+            class="hero-title uppercase text-white font-cormorant font-bold text-lg md:text-2xl lg:text-4xl tracking-wide leading-tight mb-4 md:mb-6"
+          >
+            Contact Us
+          </h1>
+          <p
+            class="font-space text-white/85 text-sm md:text-lg leading-relaxed"
+          >
+            Purbachal Royal City is a fully planned township — considered from
+            its roads to its rooflines, for the families who will call it home.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 ta card -->
+
+    <section
+      class="w-full py-10 px-4 sm:px-6 md:py-12 md:px-10 lg:py-16 lg:px-16"
+    >
+      <!--
+    Equal height er main trick:
+    grid + auto-rows-fr  => shob row er height shomaan hoy (shobcheye boro card ta jotota, shobgula totota)
+    card e h-full lagano ache, tai card gula puro cell bhore thake.
+    mobile: 1 column | md (tablet): 3 column | lg (laptop): 4 column
+  -->
+      <div class="container mx-auto">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 auto-rows-fr gap-4 sm:gap-5 lg:gap-6"
+        >
+          <!-- ============ Phone ============ -->
+          <div
+            class="h-full flex flex-col items-center text-center bg-[#fdf8e4] rounded-2xl px-4 py-6 sm:px-5 sm:py-7 lg:px-6 lg:py-8"
+          >
+            <!-- apnar svg code ekhane boshan (class e text-[#2b2118] dile color control hobe, path e fill="currentColor") -->
+            <svg
+              class="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10"
+              width="56"
+              height="56"
+              viewBox="0 0 56 56"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M28 0C12.5607 0 0 12.5607 0 28C0 43.4393 12.5607 56 28 56C43.4393 56 56 43.4393 56 28C56 12.5607 43.4393 0 28 0ZM28 53.375C14.0082 53.375 2.625 41.9918 2.625 28C2.625 14.0082 14.0082 2.625 28 2.625C41.9918 2.625 53.375 14.0082 53.375 28C53.375 41.9918 41.9918 53.375 28 53.375ZM42.6438 33.093C42.6437 33.093 42.6437 33.093 42.6438 33.093L37.5 30.1233C36.7124 29.6686 35.7933 29.5481 34.9123 29.7841C34.0313 30.0202 33.2955 30.584 32.8408 31.3717C32.577 31.8288 32.1149 32.4038 31.412 32.5475C30.7708 32.6786 30.2048 32.5514 29.6815 32.1588C27.7484 30.708 25.2923 28.2519 23.8413 26.3186C23.4487 25.7953 23.3215 25.2292 23.4526 24.5883C23.5963 23.8851 24.1713 23.4231 24.6284 23.1593C26.2571 22.2188 26.8171 20.1287 25.8768 18.5L22.9071 13.3561C22.0565 11.883 20.2898 11.2652 18.7068 11.8868L18.6453 11.9109C16.1872 12.876 14.3897 13.6165 13.6464 14.3598C12.2962 15.7102 10.9285 18.2229 12.0815 22.5256C14.3207 30.8828 25.1172 41.6793 33.4744 43.9187C34.6092 44.2227 35.6194 44.3515 36.5167 44.3515C39.0217 44.3515 40.6462 43.3479 41.6404 42.3537C42.3836 41.6105 43.1239 39.8134 44.0888 37.3559L44.1135 37.2934C44.7348 35.7102 44.1168 33.9437 42.6438 33.093ZM41.6697 36.3339L41.6451 36.3966C41.1796 37.5822 40.2111 40.0493 39.7838 40.4975C38.531 41.7505 36.6367 42.0483 34.1535 41.3831C26.6654 39.3766 16.623 29.3343 14.6167 21.8461C13.9513 19.3632 14.2493 17.4688 15.501 16.2173C15.9506 15.7887 18.4183 14.82 19.6042 14.3545L19.6658 14.3302C19.7602 14.2927 19.8608 14.2734 19.9624 14.2731C20.2335 14.2731 20.4871 14.4155 20.6334 14.6687L23.6031 19.8125C23.8197 20.1878 23.6907 20.6692 23.3156 20.8858C22.0101 21.6395 21.1454 22.7676 20.8806 24.0623C20.5984 25.4424 20.8961 26.7673 21.7416 27.8941C23.3482 30.0349 25.9652 32.6519 28.1058 34.2582C29.2323 35.1037 30.5574 35.4014 31.9376 35.1192C33.2323 34.8544 34.3604 33.9896 35.1141 32.6841C35.1656 32.5948 35.2344 32.5166 35.3163 32.4541C35.3983 32.3915 35.4919 32.3458 35.5916 32.3197C35.6911 32.2925 35.795 32.2853 35.8972 32.2985C35.9995 32.3117 36.0982 32.345 36.1875 32.3965L41.3312 35.3663C41.676 35.5656 41.8153 35.9635 41.6697 36.3339Z"
+                fill="currentColor"
+              />
+            </svg>
+
+            <h3
+              class="font-space mt-3 sm:mt-4 text-sm sm:text-[15px] lg:text-base font-semibold text-[#2b2118]"
+            >
+              Phone Number
+            </h3>
+            <p
+              class="font-space mt-2 text-xs sm:text-sm text-[#2b2118] leading-relaxed break-words"
+            >
+              +880 1642 568596
+            </p>
+          </div>
+
+          <!-- ============ Email ============ -->
+          <div
+            class="h-full flex flex-col items-center text-center bg-[#fdf8e4] rounded-2xl px-4 py-6 sm:px-5 sm:py-7 lg:px-6 lg:py-8"
+          >
+            <svg
+              class="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10"
+              width="56"
+              height="56"
+              viewBox="0 0 56 56"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M28 0C12.5607 0 0 12.5607 0 28C0 43.4393 12.5607 56 28 56C43.4393 56 56 43.4393 56 28C56 12.5607 43.4393 0 28 0ZM28 53.375C14.0082 53.375 2.625 41.9918 2.625 28C2.625 14.0082 14.0082 2.625 28 2.625C41.9918 2.625 53.375 14.0082 53.375 28C53.375 41.9918 41.9918 53.375 28 53.375ZM41.1591 16.4609H14.8408C13.0805 16.4609 11.6483 17.8931 11.6483 19.6534V36.3467C11.6483 38.107 13.0804 39.5392 14.8408 39.5392H41.1591C42.9194 39.5392 44.3516 38.107 44.3516 36.3467V19.6534C44.3516 17.8931 42.9194 16.4609 41.1591 16.4609ZM39.1806 19.0859L28 27.9647L16.8193 19.0859H39.1806ZM41.1591 36.9141H14.8408C14.6903 36.9139 14.5461 36.854 14.4397 36.7477C14.3333 36.6413 14.2735 36.4971 14.2733 36.3466V20.4162L27.1837 30.6684C27.4227 30.8582 27.7114 30.9531 27.9999 30.9531C28.2884 30.9531 28.5772 30.8583 28.816 30.6684L41.7266 20.4162V36.3466C41.7264 36.4971 41.6665 36.6413 41.5602 36.7477C41.4538 36.854 41.3096 36.9139 41.1591 36.9141Z"
+                fill="currentColor"
+              />
+            </svg>
+
+            <h3
+              class="font-space mt-3 sm:mt-4 text-sm sm:text-[15px] lg:text-base font-semibold text-[#2b2118]"
+            >
+              Email Address
+            </h3>
+            <p
+              class="font-space mt-2 text-xs sm:text-sm text-[#2b2118] leading-relaxed break-all sm:break-words"
+            >
+              info@purbachalroyalcity.com
+            </p>
+          </div>
+
+          <!-- ============ WhatsApp ============ -->
+          <div
+            class="h-full flex flex-col items-center text-center bg-[#fdf8e4] rounded-2xl px-4 py-6 sm:px-5 sm:py-7 lg:px-6 lg:py-8"
+          >
+            <svg
+              class="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10"
+              width="56"
+              height="56"
+              viewBox="0 0 56 56"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M28 1C42.9121 1 55 13.0879 55 28C55 42.9121 42.9121 55 28 55H27.998C23.2275 55.0082 18.5408 53.7452 14.4199 51.3418L14.0576 51.1309L13.6523 51.2412L1.43555 54.5742L4.76172 42.3525L4.87207 41.9473L4.66016 41.5859C2.25483 37.4637 0.99168 32.7746 1 28.002V28C1 13.0879 13.0879 1.00001 28 1ZM18.7617 13.8369C18.4461 13.8294 18.1303 13.838 17.8154 13.8623V13.8662C17.3288 13.9015 16.8531 14.03 16.415 14.2451L16.3887 14.2578L16.3623 14.2725C16.072 14.4372 15.8007 14.6329 15.5527 14.8555L15.3135 15.0859C15.1248 15.2668 14.9709 15.4398 14.8428 15.5967L14.5088 16.0283C13.3383 17.5504 12.7077 19.4189 12.7168 21.3389V21.3398C12.7231 22.8833 13.1262 24.3579 13.7285 25.7012L13.7305 25.7051C14.9332 28.3576 16.8934 31.1296 19.4512 33.6787H19.4521C19.8922 34.1167 20.3482 34.5796 20.8281 35.0293L21.3164 35.4736C24.5227 38.2963 28.3434 40.3321 32.4746 41.4189L32.5254 41.4316L32.5781 41.4404L34.168 41.6836L34.2168 41.6914L34.2656 41.6934C34.85 41.7249 35.4423 41.6806 35.9248 41.6572H35.9287C36.8895 41.6066 37.8281 41.3468 38.6777 40.8955L38.6768 40.8945C39.0661 40.6929 39.4472 40.4752 39.8174 40.2402L39.8301 40.2324L39.8418 40.2236H39.8428L39.8438 40.2227L39.8457 40.2217C39.8473 40.2206 39.849 40.2185 39.8516 40.2168C39.8567 40.2133 39.8643 40.2092 39.873 40.2031C39.8907 40.1909 39.916 40.1732 39.9482 40.1504C40.0127 40.1047 40.1052 40.0364 40.2266 39.9463C40.6419 39.6386 40.9188 39.4038 41.2773 39.0293L41.2764 39.0283C41.5871 38.7067 41.8425 38.3392 42.042 37.9307L42.0449 37.9238C42.3282 37.3318 42.5657 36.3427 42.6621 35.5625V35.5596C42.7391 34.9241 42.7173 34.5576 42.708 34.3506H42.707C42.6902 33.949 42.5243 33.6086 42.3438 33.3652C42.1596 33.117 41.9077 32.8956 41.6133 32.7529L41.5859 32.7412L39.9561 32.0098L39.9463 32.0059L39.9453 32.0049C39.9442 32.0044 39.9418 32.0039 39.9395 32.0029C39.9348 32.0009 39.9279 31.9971 39.9189 31.9932C39.9009 31.9853 39.8742 31.974 39.8398 31.959C39.7706 31.9287 39.6695 31.885 39.5439 31.8301C39.2928 31.7202 38.9426 31.5662 38.5459 31.3916C37.7514 31.0419 36.7749 30.6095 36.0361 30.2734L36.0283 30.2695L36.0205 30.2666C35.7703 30.1577 35.5034 30.0944 35.2314 30.0752L35.2324 30.0742C35.2224 30.0732 35.2122 30.0732 35.2021 30.0723C35.1934 30.0718 35.1845 30.0707 35.1758 30.0703L35.1748 30.0713C34.8596 30.0462 34.5423 30.0828 34.2422 30.1836C33.9659 30.2765 33.7114 30.422 33.4883 30.6084C33.4542 30.6322 33.4298 30.6525 33.417 30.6631C33.3643 30.7067 33.3172 30.7532 33.2852 30.7861C33.2139 30.8592 33.1115 30.9725 32.958 31.1484C32.6469 31.505 32.0866 32.1667 31.0732 33.3945L31.0576 33.4141L31.0508 33.4219C30.9222 33.3866 30.7954 33.3436 30.6729 33.291L30.666 33.2881L29.9639 32.9873C28.4555 32.3291 27.0589 31.4389 25.8252 30.3496L25.8213 30.3467L25.5811 30.1289C25.3452 29.9086 25.1151 29.6763 24.8418 29.4121L24.8389 29.4082C23.7999 28.413 22.8939 27.2876 22.1445 26.0596L22.1406 26.0527L21.9756 25.7871L21.9697 25.7783L21.9648 25.7695L21.8623 25.5898C21.8576 25.5803 21.8542 25.5702 21.8496 25.5605C21.8541 25.5556 21.8595 25.5512 21.8643 25.5459C21.9345 25.4681 22.0323 25.3604 22.1396 25.2393C22.349 25.003 22.6152 24.6945 22.7939 24.4668C23.1238 24.0469 23.4059 23.6374 23.5938 23.334C24.0134 22.6583 24.2725 21.7631 23.9297 20.9268H23.9307C23.1432 19.0032 22.3292 17.0895 21.4893 15.1865C21.2989 14.7548 20.9601 14.4559 20.6484 14.2666C20.3302 14.0733 19.9612 13.9445 19.5957 13.9004H19.5967C19.4295 13.8798 19.2621 13.864 19.0947 13.8516L19.0859 13.8506L19.0781 13.8496L18.7617 13.8369Z"
+                stroke="#252626"
+                stroke-width="3"
+              />
+            </svg>
+
+            <h3
+              class="font-space mt-3 sm:mt-4 text-sm sm:text-[15px] lg:text-base font-semibold text-[#2b2118]"
+            >
+              WhatsApp Number
+            </h3>
+            <p
+              class="font-space mt-2 text-xs sm:text-sm text-[#2b2118] leading-relaxed break-words"
+            >
+              +880 1642 568596
+            </p>
+          </div>
+
+          <!-- ============ Address ============ -->
+          <div
+            class="h-full flex flex-col items-center text-center bg-[#fdf8e4] rounded-2xl px-4 py-6 sm:px-5 sm:py-7 lg:px-6 lg:py-8"
+          >
+            <svg
+              class="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10"
+              width="56"
+              height="56"
+              viewBox="0 0 56 56"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M28.1071 4.37552C27.5022 4.37114 27.0089 4.85786 27.0046 5.46161C27.0002 6.06536 27.4858 6.55864 28.0906 6.56302C28.6944 6.56739 29.1877 6.08177 29.1921 5.47802C29.1964 4.87427 28.7108 4.38099 28.1071 4.37552ZM28.0573 10.9379C23.8342 10.9079 20.3757 14.3149 20.3437 18.5366C20.3119 22.7582 23.7207 26.2184 27.9424 26.2502L28.0011 26.2504C32.1959 26.2504 35.6243 22.8537 35.656 18.6515C35.6878 14.4301 32.2792 10.9697 28.0573 10.9379ZM28.0009 24.063L27.9589 24.0628C24.9433 24.0401 22.5084 21.5684 22.5311 18.553C22.5538 15.5512 25.0024 13.1251 27.9989 13.1251L28.0409 13.1253C31.0565 13.148 33.4914 15.6197 33.4686 18.6351C33.4459 21.6369 30.9973 24.063 28.0009 24.063ZM32.772 5.20502C32.203 5.00311 31.5775 5.30116 31.3756 5.87056C31.1738 6.43997 31.4719 7.06505 32.0412 7.26696C36.8588 8.97441 40.0695 13.5628 40.031 18.6845C40.0265 19.2885 40.5125 19.7819 41.1166 19.7865H41.125C41.725 19.7865 42.2139 19.3021 42.2185 18.7009C42.264 12.6473 38.4677 7.22375 32.772 5.20502Z"
+                fill="#252626"
+              />
+              <path
+                d="M34.7108 41.1733C41.9857 31.8092 46.5321 26.9262 46.5934 18.7335C46.6704 8.4257 38.3052 0 27.9982 0C17.8114 0 9.48383 8.24994 9.40639 18.4546C9.34383 26.8694 13.9747 31.7458 21.2997 41.1718C14.0126 42.2607 9.40639 44.997 9.40639 48.3438C9.40639 50.5856 11.4786 52.5973 15.2414 54.0083C18.6663 55.2926 23.1974 55.9999 27.9999 55.9999C32.8025 55.9999 37.3335 55.2926 40.7584 54.0083C44.5212 52.5972 46.5934 50.5855 46.5934 48.3436C46.5934 44.9987 41.9915 42.2632 34.7108 41.1733ZM11.5938 18.4711C11.662 9.46641 19.0093 2.1875 27.9984 2.1875C37.0939 2.1875 44.4739 9.62369 44.4061 18.7172C44.3479 26.4975 39.5264 31.2922 31.8289 41.3266C30.4559 43.1155 29.1951 44.8069 28.0016 46.4614C26.8116 44.8059 25.5758 43.1448 24.1823 41.3259C16.1666 30.8714 11.5345 26.4391 11.5938 18.4711ZM27.9999 53.8125C18.61 53.8125 11.5938 50.9253 11.5938 48.3438C11.5938 46.4292 15.7881 44.0107 22.8404 43.1733C24.3993 45.2187 25.766 47.077 27.1065 48.9748C27.2075 49.1177 27.3412 49.2343 27.4964 49.3148C27.6517 49.3953 27.824 49.4374 27.9989 49.4375H27.9999C28.1747 49.4375 28.3469 49.3956 28.5021 49.3154C28.6574 49.2351 28.7911 49.1188 28.8922 48.9763C30.22 47.1031 31.6242 45.199 33.1697 43.1745C40.2155 44.0128 44.4061 46.4306 44.4061 48.3439C44.4059 50.9253 37.3899 53.8125 27.9999 53.8125Z"
+                fill="#252626"
+              />
+            </svg>
+
+            <h3
+              class="font-space mt-3 sm:mt-4 text-sm sm:text-[15px] lg:text-base font-semibold text-[#2b2118]"
+            >
+              Our Office Address
+            </h3>
+            <p
+              class="font-space mt-2 text-xs sm:text-sm text-[#2b2118] leading-relaxed sm:leading-loose break-words"
+            >
+              Shanta Western Tower, Level-6, Bir Uttam Mir Shawkat Ali Shorok,
+              Tejgaon I/A, Dhaka-1208
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ===== FOOTER ===== -->
     <footer

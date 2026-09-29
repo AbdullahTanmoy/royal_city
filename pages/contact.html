@@ -317,7 +317,7 @@
         >
           <!-- ============ Phone ============ -->
           <div
-            class="h-full flex flex-col items-center text-center bg-[#fdf8e4] rounded-2xl px-4 py-6 sm:px-5 sm:py-7 lg:px-6 lg:py-8"
+            class="h-full flex flex-col items-center text-center bg-[#fff9e7] rounded-2xl px-4 py-6 sm:px-5 sm:py-7 lg:px-4 lg:py-6"
           >
             <!-- apnar svg code ekhane boshan (class e text-[#2b2118] dile color control hobe, path e fill="currentColor") -->
             <svg
@@ -348,7 +348,7 @@
 
           <!-- ============ Email ============ -->
           <div
-            class="h-full flex flex-col items-center text-center bg-[#fdf8e4] rounded-2xl px-4 py-6 sm:px-5 sm:py-7 lg:px-6 lg:py-8"
+            class="h-full flex flex-col items-center text-center bg-[#fff9e7] rounded-2xl px-4 py-6 sm:px-5 sm:py-7 lg:px-4 lg:py-6"
           >
             <svg
               class="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10"
@@ -378,7 +378,7 @@
 
           <!-- ============ WhatsApp ============ -->
           <div
-            class="h-full flex flex-col items-center text-center bg-[#fdf8e4] rounded-2xl px-4 py-6 sm:px-5 sm:py-7 lg:px-6 lg:py-8"
+            class="h-full flex flex-col items-center text-center bg-[#fff9e7] rounded-2xl px-4 py-6 sm:px-5 sm:py-7 lg:px-4 lg:py-6"
           >
             <svg
               class="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10"
@@ -409,7 +409,7 @@
 
           <!-- ============ Address ============ -->
           <div
-            class="h-full flex flex-col items-center text-center bg-[#fdf8e4] rounded-2xl px-4 py-6 sm:px-5 sm:py-7 lg:px-6 lg:py-8"
+            class="h-full flex flex-col items-center text-center bg-[#fff9e7] rounded-2xl px-4 py-6 sm:px-5 sm:py-7 lg:px-4 lg:py-6"
           >
             <svg
               class="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10"
@@ -444,6 +444,85 @@
         </div>
       </div>
     </section>
+
+ 
+    <!-- contact form and image  -->
+    
+<section class="w-full  py-10 px-4 sm:px-6 md:py-12 md:px-10 lg:py-16 lg:px-16">
+ 
+  <!--
+    Height-match trick:
+    grid-e default e "align-items: stretch" thake, tai lg: e dutoi ekই row-er
+    height nibe (form-er natural content-height onujayi). Image-er div-e h-full
+    diye + object-cover diye rakha, tai form joto lomba hobe, image thik shei
+    porjonto stretch/crop hoye jabe — kono jaygay fixed height hardcode korte hoy nai.
+    Mobile/tablet-e (stack hoye jay bole) image-er jonno ekta fallback height
+    (h-64 / h-72) rakha ache, karon stack obosthay stretch-match kaj kore na.
+  -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+ 
+    <!-- ============ LEFT: Form ============ -->
+    <div class="h-full flex flex-col bg-[#fdf8e4] border border-[#f2c14e] rounded-2xl p-5 sm:p-6 lg:p-8">
+ 
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+        <div>
+          <label class="font-space block text-sm font-medium text-gray-800 mb-1.5">Name</label>
+          <input type="text" placeholder="Name"
+            class="font-space w-full rounded-lg border border-gray-200 bg-white px-4 py-2.5 sm:py-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-300" />
+        </div>
+        <div>
+          <label class="font-space block text-sm font-medium text-gray-800 mb-1.5">Email</label>
+          <input type="email" placeholder="Email"
+            class="font-space w-full rounded-lg border border-gray-200 bg-white px-4 py-2.5 sm:py-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-300" />
+        </div>
+      </div>
+ 
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mt-4 sm:mt-5">
+        <div>
+          <label class="font-space block text-sm font-medium text-gray-800 mb-1.5">Phone</label>
+          <input type="tel" placeholder="Phone"
+            class="font-space w-full rounded-lg border border-gray-200 bg-white px-4 py-2.5 sm:py-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-300" />
+        </div>
+        <div>
+          <label class="font-space block text-sm font-medium text-gray-800 mb-1.5">Select Plot</label>
+          <div class="relative">
+            <select
+              class="font-space w-full appearance-none rounded-lg border border-gray-200 bg-white px-4 py-2.5 sm:py-3 text-sm text-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-300">
+              <option value="" disabled selected>Select Plot</option>
+              <option value="plot-1">Plot 1</option>
+              <option value="plot-2">Plot 2</option>
+              <option value="plot-3">Plot 3</option>
+            </select>
+            <svg class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="mt-4 sm:mt-5 flex flex-col flex-1">
+        <label class="font-space block text-sm font-medium text-gray-800 mb-1.5">Message</label>
+        <textarea placeholder="Message"
+          class="font-space w-full flex-1 min-h-[110px] sm:min-h-[130px] resize-none rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-300"></textarea>
+      </div>
+ 
+      <button type="submit"
+        class="font-space mt-5 sm:mt-6 w-full rounded-full bg-[#f5a623] hover:bg-[#e6961a] transition-colors text-gray-900 font-semibold text-sm sm:text-base py-3 sm:py-3.5">
+        Submit
+      </button>
+    </div>
+ 
+    <!-- ============ RIGHT: Image ============ -->
+    <!-- src ta apnar actual image diye replace kore din -->
+    <div class="h-64 sm:h-80 lg:h-full rounded-2xl overflow-hidden border border-[#f4c542]">
+      <img src="../assets/images/Contactformimg.jpg"
+        alt="Customer support representative"
+        class="w-full h-full object-cover" />
+    </div>
+ 
+  </div>
+</section>
+
 
     <!-- ===== FOOTER ===== -->
     <footer
